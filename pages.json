@@ -1,0 +1,524 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/loginForm/selectUserType",
+			"style": {
+				"navigationBarTitleText": "选择身份",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/loginForm/loginForm",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/loginForm/localNumberLogin",
+			"style": {
+				"navigationBarTitleText": "一键登录",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/healthGuide",
+			"style": {
+				"navigationBarTitleText": "服务项目",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/healthGuide/regularEvaluation/regularEvaluation",
+			"style": {
+				"navigationBarTitleText": "定期评估提醒",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/sportCoachingDoc/sportCoachingDoc",
+			"style": {
+				"navigationBarTitleText": "运动指导",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/nutritionGuideDoc/nutritionGuideDoc",
+			"style": {
+				"navigationBarTitleText": "营养指导",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/drugCounselingDoc/drugCounselingDoc",
+			"style": {
+				"navigationBarTitleText": "药物咨询",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/nutritionClockIn/nutritionClockIn",
+			"style": {
+				"navigationBarTitleText": "饮食打卡",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/sportClockIn/sportClockIn",
+			"style": {
+				"navigationBarTitleText": "运动打卡",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/nutritionClockIn/nutritionClockRecord",
+			"style": {
+				"navigationBarTitleText": "打卡记录",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/sportClockIn/sportClockRecord",
+			"style": {
+				"navigationBarTitleText": "打卡记录",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/personInfo",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/personInfo/nameCertification/nameCertification",
+			"style": {
+				"navigationBarTitleText": "实名认证",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/allOrders/allOrders",
+			"style": {
+				"navigationBarTitleText": "全部订单",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/waitPayment/waitPayment",
+			"style": {
+				"navigationBarTitleText": "待付款",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/waitGoods/waitGoods",
+			"style": {
+				"navigationBarTitleText": "待收货",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/waitEvaluate/waitEvaluate",
+			"style": {
+				"navigationBarTitleText": "待评价",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/afterSales/afterSales",
+			"style": {
+				"navigationBarTitleText": "售后",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/myDoctor/myDoctor",
+			"style": {
+				"navigationBarTitleText": "我的医生",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/personalData/personalData",
+			"style": {
+				"navigationBarTitleText": "个人资料",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/changPassword/changPassword",
+			"style": {
+				"navigationBarTitleText": "密码修改",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/mobilePhone/mobilePhone",
+			"style": {
+				"navigationBarTitleText": "绑定手机号",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/myPatients/myPatients",
+			"style": {
+				"navigationBarTitleText": "患者列表",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/analysisOfData/analysisOfData",
+			"style": {
+				"navigationBarTitleText": "数据分析",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personInfo/analysisOfData/scaleDetails",
+			"style": {
+				"navigationBarTitleText": "量表详情",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/HM-chat/HM-chat",
+			"style": {
+				"navigationBarTitleText": "聊天室",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"backgroundColorTop": "#e5e5e5",
+				"backgroundColorBottom": "#e5e5e5",
+				"app-plus": {
+					"softinputNavBar": "none",
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/HM-chat/HM-details/HM-details",
+			"style": {
+				"navigationBarBackgroundColor": "#cf3c35",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "红包",
+				"backgroundColorTop": "#cf3c35",
+				"backgroundColorBottom": "#fff"
+			}
+		}, {
+			"path": "pages/HM-chat/HM-hand/HM-hand",
+			"style": {
+				"navigationBarBackgroundColor": "#cf3c35",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "发红包",
+				"backgroundColorTop": "#cf3c35",
+				"backgroundColorBottom": "#fff",
+				"app-plus": {
+					"softinputNavBar": "none",
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/serverPages/serverPages",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/serverPages/assessScale/assessScale",
+			"style": {
+				"navigationBarTitleText": "量表评估",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/assessScale/assessDetail",
+			"style": {
+				"navigationBarTitleText": "量表详情",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/medicalRecords/medicalRecords",
+			"style": {
+				"navigationBarTitleText": "就诊记录",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/counseleMessage/counseleMessage",
+			"style": {
+				"navigationBarTitleText": "咨询信息",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/clockInRecord/clockInRecord",
+			"style": {
+				"navigationBarTitleText": "打卡记录",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/medicalRecords/medicalHistory",
+			"style": {
+				"navigationBarTitleText": "就诊历史",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/medicalRecords/medicalDetail",
+			"style": {
+				"navigationBarTitleText": "就诊详情",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/newList/newList",
+			"style": {
+				"navigationBarTitleText": "新闻头条",
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/serverPages/selfAssessment/selfAssessment",
+			"style": {
+				"navigationBarTitleText": "自我评价",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/selfAssessment/selectScales/selectScales",
+			"style": {
+				"navigationBarTitleText": "量表选择",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/selfAssessment/Sarcopenia/Sarcopenia",
+			"style": {
+				"navigationBarTitleText": "老年肌少症问卷",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/selfAssessment/nutritionForm/nutritionForm",
+			"style": {
+				"navigationBarTitleText": "营养评估表",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/selfAssessment/dailyLivingAbilityScale/dailyLivingAbilityScale",
+			"style": {
+				"navigationBarTitleText": "日常生活能力量表",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/selfAssessment/riskFactorTest/riskFactorTest",
+			"style": {
+				"navigationBarTitleText": "危险因素测试",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/selfAssessment/riskcheckOsteoporosis/riskcheckOsteoporosis",
+			"style": {
+				"navigationBarTitleText": "骨质疏松自我筛查",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/selfAssessment/fractureRiskPredictionTool/fractureRiskPredictionTool",
+			"style": {
+				"navigationBarTitleText": "骨折分析预测工具",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/evaluationRecords/evaluationRecords",
+			"style": {
+				"navigationBarTitleText": "评价记录",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/healthEducation/healthEducation",
+			"style": {
+				"navigationBarTitleText": "健康教育",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/onlineConsulting/onlineConsulting",
+			"style": {
+				"navigationBarTitleText": "在线咨询",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/healthEducation/sportCoaching/sportCoaching",
+			"style": {
+				"navigationBarTitleText": "运动指导",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/healthEducation/nutritionGuide/nutritionGuide",
+			"style": {
+				"navigationBarTitleText": "营养指导",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/serverPages/healthEducation/drugCounseling/drugCounseling",
+			"style": {
+				"navigationBarTitleText": "药物咨询",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/healthGuideDoc/healthGuideDoc",
+			"style": {
+				"navigationBarTitleText": "健康指导",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/clockInPlan/clockInPlan",
+			"style": {
+				"navigationBarTitleText": "打卡计划",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/healthGuide/clockInPlan/patientList",
+			"style": {
+				"navigationBarTitleText": "患者列表",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+
+		}
+
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"custom": true,
+		"list": [{
+				"pagePath": "pages/personInfo/personInfo",
+				"text": "个人信息",
+				"iconPath": "static/images/person.png",
+				"selectedIconPath": "static/images/selectedPerson.png"
+			},
+			{
+				"pagePath": "pages/serverPages/serverPages",
+				"text": "服务",
+				"iconPath": "static/images/server.png",
+				"selectedIconPath": "static/images/selectedServer.png"
+			},
+			{
+				"pagePath": "pages/healthGuide/healthGuide",
+				"text": "互动",
+				"iconPath": "static/images/healthGuide.png",
+				"selectedIconPath": "static/images/selectedHealthGuide.png"
+			}
+		]
+	}
+}
