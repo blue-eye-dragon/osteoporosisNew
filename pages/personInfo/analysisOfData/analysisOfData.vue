@@ -2,16 +2,16 @@
 	<view>
 		<view class="searchInput">
 			<view class="searchInputContent">
-				<uni-datetime-picker v-model="range" type="daterange"/>
+				<uni-datetime-picker v-model="range" type="daterange" />
 			</view>
 			<button size="mini" type="primary">搜索</button>
 		</view>
 		<uni-table border stripe emptyText="暂无更多数据">
 			<!-- 表头行 -->
 			<uni-tr>
-				<uni-th width="110px" align="center">量表类型</uni-th>
-				<uni-th width="100px" align="center">测评得分</uni-th>
-				<uni-th width="75px" align="center">操作</uni-th>
+				<uni-th width="110rpx" align="center">量表类型</uni-th>
+				<uni-th width="100rpx" align="center">测评得分</uni-th>
+				<uni-th width="75rpx" align="center">操作</uni-th>
 			</uni-tr>
 			<uni-tr v-for="(item, index) in tableData" :key="index">
 				<uni-td align="center">{{ item.scalesType }}</uni-td>
@@ -55,7 +55,7 @@
 					},
 					{
 						id: 4,
-						scalesType: '危险因素测试',
+						scalesType: '骨质疏松风险测试',
 						evaluationScore: '83'
 					},
 					{
@@ -91,46 +91,49 @@
 					id: item.id,
 					flag: 'look'
 				}
-				switch (item.scalesType){
+				switch (item.scalesType) {
 					case '老年肌少症问卷':
-					url = '/pages/serverPages/selfAssessment/Sarcopenia/Sarcopenia'
+						url = '/pages/serverPages/selfAssessment/Sarcopenia/Sarcopenia'
 						break;
 					case '营养评估表':
-					url = '/pages/serverPages/selfAssessment/nutritionForm/nutritionForm'
+						url = '/pages/serverPages/selfAssessment/nutritionForm/nutritionForm'
 						break;
 					case '日常生活能力量表':
-					url = '/pages/serverPages/selfAssessment/dailyLivingAbilityScale/dailyLivingAbilityScale'
+						url = '/pages/serverPages/selfAssessment/dailyLivingAbilityScale/dailyLivingAbilityScale'
 						break;
-					case '危险因素测试':
-					url = '/pages/serverPages/selfAssessment/riskFactorTest/riskFactorTest'
+					case '骨质疏松风险测试':
+						url = '/pages/serverPages/selfAssessment/riskFactorTest/riskFactorTest'
 						break;
 					case '骨质疏松自我筛查':
-					url = '/pages/serverPages/selfAssessment/riskcheckOsteoporosis/riskcheckOsteoporosis'
+						url = '/pages/serverPages/selfAssessment/riskcheckOsteoporosis/riskcheckOsteoporosis'
 						break;
 					case '骨折分析预测工具':
-					url = '/pages/serverPages/selfAssessment/fractureRiskPredictionTool/fractureRiskPredictionTool'
+						url = '/pages/serverPages/selfAssessment/fractureRiskPredictionTool/fractureRiskPredictionTool'
 						break;
 				}
-				this.navigateTo(url,params)
+				this.navigateTo(url, params)
 			},
 			maskClick(e) {
 				console.log('maskClick事件:', e);
 			},
 			// 分页触发
 			pageChange(e) {
-				this.getData(e.current, this.pages.pageSize,this.range)
+				this.getData(e.current, this.pages.pageSize, this.range)
 			},
 		}
 	}
 </script>
 
 <style lang="less" scoped>
-
 	.searchInput {
-		padding: 10px;
+		padding: 10rpx;
+		box-sizing: border-box;
 		display: flex;
+		align-items: center;
+
 		.searchInputContent {
 			flex: 1;
+			margin-right: 20rpx;
 		}
 	}
 </style>

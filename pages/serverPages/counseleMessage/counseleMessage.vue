@@ -44,10 +44,10 @@
 				swiperDotIndex: 0,
 				dotsStyles: {
 					backgroundColor: 'rgba(190, 236, 255, 0.3 )',
-					border: '1px rgba(149, 223, 249, 0.3) solid',
+					border: '1rpx rgba(149, 223, 249, 0.3) solid',
 					color: '#fff',
 					selectedBackgroundColor: 'rgba(190, 236, 255, 0.9 )',
-					selectedBorder: '1px rgba(149, 223, 249,0.9) solid'
+					selectedBorder: '1rpx rgba(149, 223, 249,0.9) solid'
 				},
 				info: [
 					[{
@@ -223,18 +223,27 @@
 </script>
 
 <style lang="less" scoped>
-	.searchInput {
-		padding: 10px;
-		display: flex;
+	/deep/.uni-section .uni-section-header {
+		padding: 5px;
+	}
+	.secendMain {
+		padding: 0 20rpx 50rpx;
 
-		.searchInputContent {
-			flex: 1;
+		.searchInput {
+			padding: 20rpx 0;
+			display: flex;
+			align-items: center;
+
+			.searchInputContent {
+				flex: 1;
+				margin-right: 20rpx;
+			}
 		}
 	}
 
 
 	.swiper {
-		height: 200px;
+		height: 200rpx;
 		background-color: #ffffff;
 	}
 
@@ -250,7 +259,7 @@
 		justify-content: space-evenly;
 
 		/deep/.uni-icons {
-			padding: 10px;
+			padding: 10rpx;
 			border-radius: 50%;
 			color: #ffffff !important;
 			background-image: linear-gradient(to right, #81c8f3, #237ef9);
@@ -260,9 +269,9 @@
 
 
 	.scroll-Y {
-		height: calc(100vh - 150px);
+		height: calc(100vh - 150rpx);
 		/* #ifdef MP */
-		height: calc(100vh - 200px)
+		height: calc(100vh - 160rpx - env(safe-area-inset-bottom))
 			/* #endif */
 	}
 
@@ -277,7 +286,7 @@
 	}
 
 	.chat-custom-text {
-		font-size: 12px;
+		font-size: 12rpx;
 		color: #999;
 	}
 </style>

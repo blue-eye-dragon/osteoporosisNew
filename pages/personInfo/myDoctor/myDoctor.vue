@@ -1,18 +1,18 @@
 <template>
 	<view class="myPatients">
-		<div class="searchInput">
+		<view class="searchInput">
 			<view class="searchInputContent">
 				<uni-easyinput prefixIcon="search" v-model="doctorName" placeholder="医生姓名" @iconClick="iconClick">
 				</uni-easyinput>
 			</view>
 			<button size="mini" type="primary">搜索</button>
-		</div>
+		</view>
 		<uni-table border stripe emptyText="暂无更多数据">
 			<!-- 表头行 -->
 			<uni-tr>
-				<uni-th width="100px" align="center">姓名</uni-th>
-				<uni-th width="120px" align="center" sortable @sort-change="sortCardCount">最近咨询时间</uni-th>
-				<uni-th width="80px" align="center">操作</uni-th>
+				<uni-th width="100rpx" align="center">姓名</uni-th>
+				<uni-th width="150rpx" align="center" sortable @sort-change="sortCardCount">最近咨询时间</uni-th>
+				<uni-th width="80rpx" align="center">操作</uni-th>
 			</uni-tr>
 			<uni-tr v-for="(item, index) in tableData" :key="index">
 				<uni-td align="center">
@@ -88,7 +88,7 @@
 			contact() {
 				this.navigateTo('/pages/HM-chat/HM-chat')
 			},
-			pushPerson () {
+			pushPerson() {
 				this.navigateTo('/pages/personInfo/personalData/personalData')
 			},
 			// 分页触发
@@ -101,14 +101,16 @@
 
 <style lang="less" scoped>
 	.myPatients {
-		padding: 0 20px 50px;
+		padding: 0 20rpx 50rpx;
 
 		.searchInput {
-			padding: 10px 0;
+			padding: 20rpx 0;
 			display: flex;
+			align-items: center;
 
 			.searchInputContent {
 				flex: 1;
+				margin-right: 20rpx;
 			}
 		}
 	}

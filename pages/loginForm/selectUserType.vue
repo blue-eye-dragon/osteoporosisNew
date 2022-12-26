@@ -60,12 +60,12 @@
 			justify-content: center;
 
 			.selectTitle {
-				padding: 5px 10px;
-				font-size: 20px;
-				border: 1px solid #ffffff;
+				padding: 10rpx 20rpx;
+				font-size: 40rpx;
+				border: 1rpx solid #ffffff;
 			}
 			.clockSelect {
-				margin-top: 10px;
+				margin-top: 20rpx;
 			}
 		}
 

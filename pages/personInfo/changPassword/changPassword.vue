@@ -40,10 +40,10 @@
 
 <style lang="less" scoped>
 	.changPassword {
-		padding: 20px;
+		padding: 20rpx;
 		.changePasswordModel {
-			border-bottom: 1px solid #eee;
-			margin: 20px auto;
+			border-bottom: 1rpx solid #eee;
+			margin: 20rpx auto;
 		}
 	}
 </style>

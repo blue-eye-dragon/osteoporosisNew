@@ -54,15 +54,15 @@
 
 <style lang="less" scoped>
 	.mobilePhone {
-		padding: 20px;
+		padding: 20rpx;
 
 		.remindWords {
 			text-align: center;
 		}
 
 		.mobileForm {
-			margin: 20px auto;
-			border-bottom: 1px solid #eee;
+			margin: 20rpx auto;
+			border-bottom: 1rpx solid #eee;
 
 			.verificationCode {
 				display: flex;

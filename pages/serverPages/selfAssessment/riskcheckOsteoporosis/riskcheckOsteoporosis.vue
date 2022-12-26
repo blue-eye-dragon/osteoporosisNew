@@ -1,8 +1,8 @@
 <template>
 	<view>
-		<uni-section title="骨质疏松自我筛查" subTitle="亚洲绝经后妇女骨质疏松自我筛查（OSTA）工具,计算方法是：OSTA 指数 =〔体质量（kg）- 年龄（岁）〕×0.2。"
-			type="line" padding titleFontSize="18px" subTitleFontSize="14px">
-			<uni-forms :modelValue="OSTAForm" ref="form4" labelWidth="140px">
+		<uni-section title="骨质疏松自我筛查" subTitle="亚洲绝经后妇女骨质疏松自我筛查（OSTA）工具,计算方法是：OSTA 指数 =〔体质量（kg）- 年龄（岁）〕×0.2。" padding
+			titleFontSize="36rpx" subTitleFontSize="28rpx">
+			<uni-forms :modelValue="OSTAForm" ref="form4" labelWidth="280rpx">
 				<uni-forms-item label="体质量（kg）" required>
 					<uni-easyinput v-model="OSTAForm.weight" :inputBorder="false" placeholder="请输入体质量"
 						@iconClick="clickWeight" :disabled="flag =='look' || iscomplete"></uni-easyinput>
@@ -22,8 +22,10 @@
 					@click="changeSelectNum('del')">上一页</button>
 				<button class="changeSelectNum" v-if="selectNum != allItemNum && !isSubmit" size="mini"
 					@click="changeSelectNum('add')">下一页</button>
-				<button v-if="selectNum == allItemNum && !isSubmit" @click="complete()" type="primary" size="mini">完成</button>
-				<button class="submit" v-if="isSubmit && flag != 'look'" @click="submit()" type="primary" size="mini">提交</button>
+				<button v-if="selectNum == allItemNum && !isSubmit" @click="complete()" type="primary"
+					size="mini">完成</button>
+				<button class="submit" v-if="isSubmit && flag != 'look'" @click="submit()" type="primary"
+					size="mini">提交</button>
 			</view>
 		</uni-section>
 		<view class="guideInformation" v-if="!isSubmit">
@@ -73,30 +75,34 @@
 </script>
 
 <style lang="less" scoped>
+	/deep/.uni-forms-item {
+		align-items: center;
+	}
+
 	/deep/.uni-forms-item__label {
-		font-size: 18px;
+		font-size: 36rpx;
 	}
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box .checklist-content .checklist-text {
-		font-size: 16px;
+		font-size: 32rpx;
 	}
 
 	/deep/.uni-section-content {
-		padding: 20px;
+		padding: 35rpx;
 		width: 90%;
 		box-sizing: border-box;
-		margin: 20px auto 20px;
+		margin: 35rpx auto 35rpx;
 		background-color: #f2f2f2;
 		color: #000000;
 	}
 
 	.guideInformation {
 		text-indent: 2em;
-		font-size: 16px;
+		font-size: 32rpx;
 		color: #6a6a6a;
-		margin: 20px;
-		padding: 10px;
-		min-height: 100px;
+		margin: 40rpx;
+		padding: 20rpx;
+		min-height: 200rpx;
 		background-color: #f1f1f1;
 	}
 
@@ -114,22 +120,19 @@
 		}
 
 		button {
-			margin: 0 10px;
+			margin: 0 10rpx;
 		}
 	}
 
 	/deep/.uni-section .uni-section-header__decoration.line {
 		position: absolute;
-		top: 20px;
+		top: 33rpx;
 	}
 
 	/deep/.uni-section .uni-section-header__content {
-		margin-left: 10px;
+		margin-left: 10rpx;
 	}
 
-	/deep/.uni-forms-item__label {
-		align-items: flex-start;
-	}
 
 	/deep/.uni-forms-item.is-direction-top .uni-forms-item__label {
 		padding: 0;

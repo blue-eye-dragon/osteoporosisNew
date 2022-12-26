@@ -13,10 +13,11 @@
 			<view class="swiperContent">
 				<uni-swiper-dot class="uni-swiper-dot-box" @clickItem=clickItem :info="imgList" :current="current"
 					mode="round">
-					<swiper class="swiper" circular :autoplay="true" :interval="2000"
-						:duration="500" easing-function="easeInOutCubic" @change="change">
+					<swiper class="swiper" circular :autoplay="true" :interval="2000" :duration="500"
+						easing-function="easeInOutCubic" @change="change">
 						<swiper-item v-for="item in imgList" :key="item.url" class="swiperItem">
-							<image :src="item.url" mode="scaleToFill" style="width: 100%; height: 100%" class="swiperItemImg"></image>
+							<image :src="item.url" mode="scaleToFill" style="width: 100%; height: 100%"
+								class="swiperItemImg"></image>
 						</swiper-item>
 					</swiper>
 				</uni-swiper-dot>
@@ -36,7 +37,7 @@
 		<view class="patientsServer" v-if="userType == 0">
 			<uni-section title="功能模块" titleFontSize="30rpx" type="line">
 				<view class="gridBox">
-					
+
 					<uni-grid :column="3" :highlight="true" @change="changeGrid" :showBorder="false">
 						<uni-grid-item v-for="(item,index) in swiperList" :index="index" :key="item.id" :height="100">
 							<view class="grid-item-box" style="background-color: #fff;">
@@ -249,10 +250,10 @@
 </script>
 
 <style lang="less" scoped>
-	
 	/deep/.uni-list-item__container {
 		align-items: center;
 	}
+
 	/deep/.uni-section-header__slot-right {
 		color: #9e9e9e;
 	}
@@ -268,7 +269,7 @@
 		border-radius: 50rpx;
 		overflow: hidden;
 	}
-	
+
 	.serverPages {
 		height: 100vh;
 		background-color: #edf7ff;
@@ -276,7 +277,7 @@
 
 	.swiperItem {
 		padding: 20rpx;
-		
+
 		padding-top: 5rpx;
 		box-sizing: border-box;
 
@@ -327,22 +328,22 @@
 	}
 
 	.functionModule {
-		padding: 20rpx;
+		padding: 40rpx;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 
 		.module {
-			width: 70%;
-			height: 60rpx;
-			margin: 20rpx 0;
+			width: 85%;
+			height: 120rpx;
+			margin: 30rpx 0;
 			color: #ffffff;
 			display: flex;
-			font-size: 20rpx;
+			font-size: 45rpx;
 			font-weight: 600;
 			justify-content: center;
 			align-items: center;
-			box-shadow: 5rpx 3rpx 10rpx 0rpx #1a9def;
+			box-shadow: 8rpx 6rpx 13rpx 0rpx #1a9def;
 		}
 	}
 

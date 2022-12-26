@@ -3,7 +3,7 @@
 		<uni-collapse accordion v-model="accordionVal" @change="change">
 			<uni-collapse-item title="检测结果">
 				<view class="content">
-					<uni-forms label-position="left" :modelValue="detectionModel" ref="form" labelWidth="80px">
+					<uni-forms label-position="left" :modelValue="detectionModel" ref="form" labelWidth="160rpx">
 						<uni-forms-item label="T值:" borderBottom>
 							<uni-easyinput v-model="detectionModel.Tvalue" :inputBorder="false" disabled
 								 :styles="{'disableColor':'#ffffff'}">
@@ -45,10 +45,10 @@
 			</uni-collapse-item>
 			<uni-collapse-item title="测评报告">
 				<view class="content">
-					<uni-section title="测评报告" type="line" padding="0 10px">
+					<uni-section title="测评报告" type="line" padding="0 20rpx">
 						心里测评的目的是为了给个体的心里健康水平提供客观、量化的信息，但是测评结果不能作为唯一评判的依据，需结合近期生活中发生的应激事件、个人的成长背景进行综合考量
 					</uni-section>
-					<uni-section title="测评结果" type="line" padding="0 10px">
+					<uni-section title="测评结果" type="line" padding="0 20rpx">
 						<view class="psychologicalRes">
 							<view class="psychologicalResTit">
 								<view class="level">测评等级： A</view>
@@ -57,11 +57,11 @@
 									<view class="explainText">等级说明</view>
 								</view>
 							</view>
-							<uni-rate active-color="#FA3534" color="#b2b2b2" margin="20px" :max="count" readonly
+							<uni-rate active-color="#FA3534" color="#b2b2b2" margin="40rpx" :max="count" readonly
 								v-model="value"></uni-rate>
 						</view>
 					</uni-section>
-					<uni-section title="结果解析" type="line" padding="0 10px">
+					<uni-section title="结果解析" type="line" padding="0 20rpx">
 						<view class="">
 							患者情绪控制远高于一般人，在生活中情绪状态稳定，能够很好的控制自身的情绪变化，承受较大的压力。
 						</view>
@@ -120,20 +120,24 @@
 </script>
 
 <style lang="less" scoped>
+	/deep/.uni-forms-item {
+		margin-bottom: 20rpx;
+	}
 	.content {
-		padding: 10px;
+		padding: 20rpx;
 		background-color: #ffffff;
 
 		.ethicals {
-			padding: 10px 20px;
-			margin-bottom: 10px;
+			padding: 20rpx 40rpx;
+			margin-bottom: 20rpx;
 			background-color: #ffffff;
-			border-radius: 20px;
-			box-shadow: 3px 3px 5px 2px #c1c1c1;
+			border-radius: 40rpx;
+			font-size: 32rpx;
+			box-shadow: 3rpx 3rpx 5rpx 2rpx #c1c1c1;
 		}
 
 		.psychologicalRes {
-			height: 80px;
+			height: 160rpx;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -145,8 +149,8 @@
 				width: 100%;
 
 				.level {
-					padding: 2px 10px;
-					border-radius: 10px;
+					padding: 2rpx 10rpx;
+					border-radius: 10rpx;
 					background-color: #2da2ff;
 					color: #ffffff;
 				}
@@ -156,7 +160,7 @@
 					align-items: center;
 
 					.explainText {
-						margin-left: 5px;
+						margin-left: 5rpx;
 					}
 				}
 			}

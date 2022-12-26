@@ -1,7 +1,8 @@
 <template>
 	<view class="riskFactorTest">
-		<uni-section title="骨质疏松风险测试" subTitle="IOF骨质疏松症风险检查旨在作为一种工具来提高人们对已知会增加骨质疏松症和骨折风险的因素的认知识。此风险检查不是诊断工具：只有医生才能诊断出骨质疏松症。尽管答复是根据您提供的资讯产信息生成的，但它们基本本质上是一般性的，可能与您的个人情况无关。请谘询医生以讨论您可能遇到的任何问题或疑虑。" type="line" padding
-			titleFontSize="18px" subTitleFontSize="14px">
+		<uni-section title="骨质疏松风险测试"
+			subTitle="IOF骨质疏松症风险检查旨在作为一种工具来提高人们对已知会增加骨质疏松症和骨折风险的因素的认知识。此风险检查不是诊断工具：只有医生才能诊断出骨质疏松症。尽管答复是根据您提供的资讯产信息生成的，但它们基本本质上是一般性的，可能与您的个人情况无关。请谘询医生以讨论您可能遇到的任何问题或疑虑。"
+			padding titleFontSize="36rpx" subTitleFontSize="28rpx">
 			<!-- 注意，如果需要兼容微信小程序，最好通过setRules方法设置rules规则 -->
 			<uni-forms label-position="top" :modelValue="riskFactorsForm" ref="form4" labelWidth="auto">
 				<view class="questionTitle" v-if="!isSubmit">
@@ -10,8 +11,8 @@
 				<uni-forms-item label="您是否已超过60岁（含）？" v-if="selectNum == 1 || isSubmit">
 					<uni-data-checkbox v-model="riskFactorsForm.form1" :localdata="whetherNotList" mode="list"
 						:disabled="flag =='look' || iscomplete" />
-					<view class="ageRange">
-						<uni-data-checkbox v-if="riskFactorsForm.form1 == 0" mode="list" v-model="riskFactorsForm.age"
+					<view class="ageRange" v-if="riskFactorsForm.form1 == 0" >
+						<uni-data-checkbox mode="list" v-model="riskFactorsForm.age"
 							:localdata="ageList">
 						</uni-data-checkbox>
 					</view>
@@ -382,86 +383,88 @@
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box.is--list {
 		background-color: #ffffff;
-		margin-top: 5px;
+		margin-top: 10rpx;
 	}
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box.is--list.is-checked {
 		background-color: #1a9def;
-		margin-top: 5px;
+		margin-top: 10rpx;
 	}
 
 	/deep/.uni-section-content {
-		padding: 20px;
+		padding: 35rpx;
 		width: 90%;
 		box-sizing: border-box;
-		margin: 20px auto 20px;
+		margin: 35rpx auto 35rpx;
 		background-color: #f2f2f2;
 		color: #000000;
 	}
 
 	/deep/.uni-forms-item__label {
-		font-size: 18px;
+		font-size: 34rpx;
 		height: auto;
 		color: #003366;
-		margin-bottom: 20px;
+		margin-bottom: 28rpx;
 	}
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box .checklist-content .checklist-text {
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 32rpx;
+		line-height: 40rpx;
 	}
 
 	.riskFactorTest {
-		padding-bottom: 20px;
+		padding-bottom: 35rpx;
+
 		.questionTitle {
 			text-align: right;
 			color: #858585;
-			line-height: 35px;
-			font-size: 16px;
+			line-height: 62rpx;
+			font-size: 34rpx;
 		}
 	}
 
 	.resultStyle {
 		width: 100%;
 		color: #ffffff;
-		font-size: 20px;
-		line-height: 25px;
-		padding: 5px 0;
+		font-size: 20rpx;
+		line-height: 25rpx;
+		padding: 5rpx 0;
 		background-color: #faa836;
 	}
 
 	.ageRange {
-		margin: 20px;
+		margin: 20rpx ;
 	}
 
 	.BMIClass {
 		display: flex;
-		font-size: 18px;
-		line-height: 30px;
-		margin: 10px auto;
+		align-items: center;
+		font-size: 30rpx;
+		line-height: 40rpx;
+		margin: 10rpx auto;
 
 		.BMIClassTitle {
-			width: 150px;
+			width: 220rpx;
 		}
 	}
 
 
 	.guideInformation {
-		font-size: 16px;
 		text-align: center;
 		color: #6a6a6a;
-		margin: 20px;
-		padding: 10px;
-		min-height: 100px;
+		margin: 40rpx;
+		padding: 20rpx;
+		min-height: 200rpx;
+		box-sizing: border-box;
 		background-color: #f1f1f1;
 
 		.guideInformationTitle {
-			font-size: 22px;
-			margin: 10px;
+			font-size: 40rpx;
+			margin: 20rpx;
 		}
 
 		.guideInformationContent {
-			font-size: 16px;
+			font-size: 32rpx;
 		}
 	}
 
@@ -479,17 +482,17 @@
 		}
 
 		button {
-			margin: 0 10px;
+			margin: 0 10rpx;
 		}
 	}
 
 	/deep/.uni-section .uni-section-header__decoration.line {
 		position: absolute;
-		top: 20px;
+		top: 33rpx;
 	}
 
 	/deep/.uni-section .uni-section-header__content {
-		margin-left: 10px;
+		margin-left: 10rpx;
 	}
 
 	/deep/.uni-forms-item__label {

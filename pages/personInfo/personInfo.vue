@@ -223,7 +223,7 @@
 	}
 
 	.scroll-Y {
-		height: calc(100vh - 470rpx);
+		height: calc(100vh - 900rpx);
 	}
 
 	.grid-item-box {

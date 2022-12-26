@@ -26,7 +26,7 @@
 
 <style lang="less" scoped>
 	.localNumber {
-		padding: 20px;
-		margin-top: 120px;
+		padding: 40rpx;
+		margin-top: 240rpx;
 	}
 </style>

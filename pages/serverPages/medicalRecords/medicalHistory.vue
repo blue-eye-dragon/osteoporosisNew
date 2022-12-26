@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="patientsInfo">
-			<uni-forms label-position="left" :modelValue="patientsInfoForm" ref="form" labelWidth="80px">
+			<uni-forms label-position="left" :modelValue="patientsInfoForm" ref="form" labelWidth="160rpx">
 				<uni-forms-item label="姓名:">
 					<uni-easyinput v-model="patientsInfoForm.name" :inputBorder="false" disabled :styles="{'disableColor':'#ffffff'}">
 					</uni-easyinput>
@@ -213,7 +213,7 @@
 
 <style lang="less" scoped>
 	/deep/.uni-forms-item {
-		margin-bottom: 0px;
+		margin-bottom: 0rpx;
 	}
 
 	/deep/.uni-forms-item__content {
@@ -222,7 +222,7 @@
 	}
 
 	.patientsInfo {
-		padding: 10px;
+		padding: 20rpx;
 	}
 
 	.symptomContent {
@@ -232,18 +232,18 @@
 		align-items: center;
 
 		.symptom {
-			height: 16px;
-			padding: 3px 4px;
+			height: 32rpx;
+			padding: 6rpx 8rpx;
 			color: #ffffff;
-			font-size: 12px;
-			border-radius: 5px;
-			margin-right: 2px;
+			font-size: 24rpx;
+			border-radius: 10rpx;
+			margin-right: 4rpx;
 			background-color: #f9ae3d;
 		}
 	}
 
 	.content {
-		max-height: 480px;
+		max-height: 800rpx;
 		overflow-y: auto;
 
 		.medicalCard {
@@ -251,16 +251,16 @@
 
 			.medicalAbstract {
 				flex: 1;
-				font-size: 13px;
-				padding: 10px;
+				font-size: 26rpx;
+				padding: 20rpx;
 
 				.medicalAbstractContent {
-					margin-left: 10px;
+					margin-left: 20rpx;
 				}
 			}
 
 			.detailBtn {
-				width: 80px;
+				width: 160rpx;
 				display: flex;
 				justify-content: center;
 				align-items: center;

@@ -136,45 +136,45 @@
 		background-color: #fafafa;
 
 		.nameCert {
-			margin: 5px auto;
+			margin: 5rpx auto;
 
 			.inputLeft {
 				color: grey;
 				display: inline-block;
-				width: 80px;
-				font-size: 14px;
+				width: 80rpx;
+				font-size: 14rpx;
 			}
 
 			.nameCertSex {
 				display: flex;
-				padding: 6px 0;
-				border: 1px solid #dadbde;
+				padding: 6rpx 0;
+				border: 1rpx solid #dadbde;
 
 				.nameCertSexTitle {
-					padding: 0 9px;
+					padding: 0 9rpx;
 					color: grey;
-					width: 80px;
-					font-size: 14px;
+					width: 80rpx;
+					font-size: 14rpx;
 				}
 
 				.space {
 					display: inline-block;
-					width: 20px;
+					width: 20rpx;
 				}
 			}
 		}
 
 		.idCarsUpload {
 			.idCarsUploadTitle {
-				padding: 6px 9px;
+				padding: 6rpx 9rpx;
 				color: grey;
-				width: 80px;
-				font-size: 14px;
+				width: 80rpx;
+				font-size: 14rpx;
 			}
 
 			.idCarsUploadContent {
 				display: flex;
-				padding: 20px;
+				padding: 20rpx;
 			}
 		}
 	}

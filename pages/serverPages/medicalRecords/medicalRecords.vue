@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="medicalRecords">
 		<view class="searchInput">
 			<view class="searchInputContent">
 				<uni-easyinput prefixIcon="search" v-model="patientName" placeholder="患者姓名" @iconClick="iconClick">
@@ -96,11 +96,18 @@
 </script>
 
 <style lang="less" scoped>
-	.searchInput {
-		padding: 10px;
-		display: flex;
-		.searchInputContent {
-			flex: 1;
+	.medicalRecords {
+		padding: 0 20rpx 50rpx;
+
+		.searchInput {
+			padding: 20rpx 0;
+			display: flex;
+			align-items: center;
+
+			.searchInputContent {
+				flex: 1;
+				margin-right: 20rpx;
+			}
 		}
 	}
 </style>

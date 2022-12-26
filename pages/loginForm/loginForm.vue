@@ -2,8 +2,8 @@
 	<view>
 		<view class="loginBox main">
 			<view class="titleName">
-				<view :style="{'fontSize':'25px'}">老年肌少-骨质疏松人群</view>
-				<view :style="{'fontSize':'20px'}">移动健康管理运营平台</view>
+				<view :style="{'fontSize':'50rpx'}">老年肌少-骨质疏松人群</view>
+				<view :style="{'fontSize':'40rpx'}">移动健康管理运营平台</view>
 			</view>
 			<view class="loginForm">
 				<uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" styleType="text"
@@ -28,7 +28,7 @@
 							<view class="socialSccountTitle">社交账号登陆</view>
 							<view>
 								<img src="../../static/login/weChat.png"></img>
-								<img :style="{'margin':'0 20px'}" src="../../static/login/QQ.png"></img>
+								<img :style="{'margin':'0 40rpx'}" src="../../static/login/QQ.png"></img>
 								<img src="../../static/login/sinaWeibo.png"></img>
 							</view>
 						</view>
@@ -174,7 +174,7 @@
 		width: 100vw;
 		min-height: 100vh;
 		display: flex;
-		padding: 20px;
+		padding: 40rpx;
 		box-sizing: border-box;
 		flex-direction: column;
 		align-items: center;
@@ -189,34 +189,34 @@
 
 		.loginForm {
 			width: 90%;
-			margin-top: 30px;
-			padding: 20px;
+			margin-top: 60rpx;
+			padding: 40rpx;
 			background-color: #ffffff;
-			border-radius: 20px;
+			border-radius: 40rpx;
 
 			.content {
-				padding: 20px 0;
+				padding: 40rpx 0;
 
 				.loginTitle {
 					width: 100%;
-					line-height: 50px;
+					line-height: 10rpx;
 					text-align: center;
-					font-size: 20px;
+					font-size: 40rpx;
 				}
 
 				.formItemBox {
 					margin: 5% 0;
-					height: 60px;
+					height: 120rpx;
 
 					.title {
-						font-size: 14px;
+						font-size: 28rpx;
 					}
 
 					.inputClass {
 						height: 60%;
-						padding: 10px;
+						padding: 20rpx;
 						box-sizing: border-box;
-						border-radius: 10px;
+						border-radius: 20rpx;
 						background-color: #f1f5f8;
 					}
 				}
@@ -224,40 +224,40 @@
 				.forgotPassword {
 					width: 100%;
 					text-align: center;
-					font-size: 14px;
-					line-height: 30px;
+					font-size: 28rpx;
+					line-height: 60rpx;
 				}
 
 				.socialSccount {
 					width: 100%;
-					height: 80px;
+					height: 160rpx;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					border-top: 1px solid #c2c2c2;
+					border-top: 1rpx solid #c2c2c2;
 					position: relative;
-					margin-top: 20px;
+					margin-top: 40rpx;
 
 					.socialSccountTitle {
 						background-color: #ffffff;
 						position: absolute;
-						top: -22px;
-						padding: 10px;
-						font-size: 18px;
+						top: -44rpx;
+						padding: 20rpx;
+						font-size: 36rpx;
 					}
 
 					img {
-						width: 32px;
-						height: 32px;
+						width: 64rpx;
+						height: 64rpx;
 					}
 				}
 			}
 		}
 	}
 	/deep/.segmented-control__text {
-		font-size: 24px;
+		font-size: 48rpx;
 	}
 	/deep/.uni-forms-item__label {
-		font-size: 18px;
+		font-size: 36rpx;
 	}
 </style>

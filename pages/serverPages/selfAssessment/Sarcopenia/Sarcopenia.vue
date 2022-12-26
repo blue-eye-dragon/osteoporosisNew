@@ -1,8 +1,8 @@
 <template>
 	<view class="Sarcopenia">
 		<uni-section title="老年肌少症问卷"
-			subTitle="每个条目取值范围是0-2分,问卷取值范围是0-10分。当得分为0-3分时,认为受试者目前不存在肌少症；当得分≥4分时,认为受试者患有肌少症,且得分越高程度越严重" type="line"
-			padding titleFontSize="18px" subTitleFontSize="14px">
+			subTitle="每个条目取值范围是0-2分,问卷取值范围是0-10分。当得分为0-3分时,认为受试者目前不存在肌少症；当得分≥4分时,认为受试者患有肌少症,且得分越高程度越严重" padding
+			titleFontSize="36rpx" subTitleFontSize="28rpx">
 			<!-- 注意，如果需要兼容微信小程序，最好通过setRules方法设置rules规则 -->
 			<uni-forms label-position="top" :modelValue="sarcopeniaForm" ref="form1" labelWidth="auto">
 				<view class="questionTitle" v-if="!isSubmit">
@@ -34,8 +34,10 @@
 					@click="changeSelectNum('del')">上一页</button>
 				<button class="changeSelectNum" v-if="selectNum != allItemNum && !isSubmit" size="mini"
 					@click="changeSelectNum('add')">下一页</button>
-				<button v-if="selectNum == allItemNum && !isSubmit" @click="complete()" type="primary" size="mini">完成</button>
-				<button class="submit" v-if="isSubmit && flag != 'look'" @click="submit()" type="primary" size="mini">提交</button>
+				<button v-if="selectNum == allItemNum && !isSubmit" @click="complete()" type="primary"
+					size="mini">完成</button>
+				<button class="submit" v-if="isSubmit && flag != 'look'" @click="submit()" type="primary"
+					size="mini">提交</button>
 			</view>
 		</uni-section>
 
@@ -170,62 +172,63 @@
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box.is--list {
 		background-color: #ffffff;
-		margin-top: 5px;
+		margin-top: 10rpx;
 	}
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box.is--list.is-checked {
 		background-color: #1a9def;
-		margin-top: 5px;
+		margin-top: 10rpx;
 	}
 
 	/deep/.uni-section-content {
-		padding: 20px;
+		padding: 35rpx;
 		width: 90%;
 		box-sizing: border-box;
-		margin: 20px auto 20px;
+		margin: 35rpx auto 35rpx;
 		background-color: #f2f2f2;
 		color: #000000;
 	}
 
 	/deep/.uni-forms-item__label {
-		font-size: 18px;
+		font-size: 34rpx;
 		height: auto;
 		color: #003366;
-		margin-bottom: 20px;
+		margin-bottom: 28rpx;
 	}
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box .checklist-content .checklist-text {
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 32rpx;
+		line-height: 40rpx;
 	}
 
 	.Sarcopenia {
-		padding-bottom: 20px;
+		padding-bottom: 35rpx;
 
 		.questionTitle {
 			text-align: right;
 			color: #858585;
-			line-height: 35px;
-			font-size: 16px;
+			line-height: 62rpx;
+			font-size: 34rpx;
 		}
 	}
 
 
 	.guideInformation {
-		font-size: 16px;
 		text-align: center;
 		color: #6a6a6a;
-		margin: 20px;
-		padding: 10px;
-		min-height: 100px;
+		margin: 40rpx;
+		padding: 20rpx;
+		min-height: 200rpx;
+		box-sizing: border-box;
 		background-color: #f1f1f1;
+
 		.guideInformationTitle {
-			font-size: 22px;
-			margin: 10px;
+			font-size: 40rpx;
+			margin: 20rpx;
 		}
 
 		.guideInformationContent {
-			font-size: 16px;
+			font-size: 32rpx;
 		}
 	}
 
@@ -243,17 +246,17 @@
 		}
 
 		button {
-			margin: 0 10px;
+			margin: 0 20rpx;
 		}
 	}
 
 	/deep/.uni-section .uni-section-header__decoration.line {
 		position: absolute;
-		top: 20px;
+		top: 33rpx;
 	}
 
 	/deep/.uni-section .uni-section-header__content {
-		margin-left: 10px;
+		margin-left: 20rpx;
 	}
 
 	/deep/.uni-forms-item__label {

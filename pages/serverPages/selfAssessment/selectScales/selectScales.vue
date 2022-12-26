@@ -105,20 +105,8 @@
 </script>
 
 <style lang="less" scoped>
-	.swiperBg {
-		position: absolute;
-		top: 0;
-		background: linear-gradient(180deg, #1a9def, #75c4f5);
-		width: 100%;
-		height: 100px;
-		padding: 10px 20px;
-		box-sizing: border-box;
-		z-index: 1;
-		border-radius: 0 0 30px 30px;
-	}
-
 	/deep/.uni-noticebar {
-		padding: 15px 5% 0 !important;
+		padding: 20rpx 5% 0 !important;
 		margin-bottom: 0 !important;
 	}
 
@@ -136,41 +124,40 @@
 			top: 0;
 			background: linear-gradient(180deg, #1a9def, #75c4f5);
 			width: 100%;
-			height: 100px;
-			padding: 10px 20px;
+			height: 160rpx;
 			box-sizing: border-box;
 			z-index: -1;
-			border-radius: 0 0 30px 30px;
+			border-radius: 0 0 50rpx 50rpx;
 		}
 	}
 
 	.scalesList {
 		display: flex;
-		height: calc(100vh - 44px);
+		height: calc(100vh - 88rpx);
 		flex-wrap: wrap;
 		flex-direction: column;
 		align-items: center;
 
 		.scalesItem {
 			width: 90vw;
-			font-size: 20px;
+			font-size: 35rpx;
 			background-color: #ffffff;
 			display: flex;
 			align-items: center;
-			margin-top: 15px;
-			padding: 20px 0;
-			border-radius: 7px;
-			box-shadow: 3px 2px 5px 2px #898989;
+			margin-top: 25rpx;
+			padding: 20rpx 0;
+			border-radius: 14rpx;
+			box-shadow: 5rpx 4rpx 7rpx 4rpx #898989;
 
 			.scalesItemIcon {
-				width: 40px;
-				height: 40px;
-				margin: 0 15px;
+				width: 65rpx;
+				height: 65rpx;
+				margin: 0px 20rpx;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				border-radius: 50%;
-				padding: 5px;
+				padding: 20rpx;
 			}
 
 			.scalesItemContent {
@@ -181,12 +168,12 @@
 
 				.scalesItemContentTitle {
 					font-weight: 700;
-					font-size: 22px;
-					margin-bottom: 5px;
+					font-size: 40rpx;
+					margin-bottom: 10rpx;
 				}
 
 				.scalesItemContentSub {
-					font-size: 14px;
+					font-size: 24rpx;
 				}
 			}
 

@@ -1,7 +1,7 @@
 <template>
 	<view class="fractureRiskPredictionTool">
-		<uni-section title="骨折风险预测工具" subTitle="骨折风险采用 WHO 推荐的骨折风险预测工具（FRAX®）计算" type="line" padding
-			titleFontSize="18px" subTitleFontSize="14px">
+		<uni-section title="骨折风险预测工具" subTitle="骨折风险采用 WHO 推荐的骨折风险预测工具（FRAX®）计算" padding titleFontSize="36rpx"
+			subTitleFontSize="28rpx">
 			<uni-forms label-position="top" :modelValue="riskProfileForm" ref="form4" labelWidth="auto">
 				<view class="questionTitle" v-if="!isSubmit">
 					问题{{selectNum}}/共{{allItemNum}}问
@@ -295,68 +295,69 @@
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box.is--list {
 		background-color: #ffffff;
-		margin-top: 5px;
+		margin-top: 10rpx;
 	}
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box.is--list.is-checked {
 		background-color: #1a9def;
-		margin-top: 5px;
+		margin-top: 10rpx;
 	}
 
 	/deep/.uni-section-content {
-		padding: 20px;
+		padding: 35rpx;
 		width: 90%;
 		box-sizing: border-box;
-		margin: 20px auto 20px;
+		margin: 35rpx auto 35rpx;
 		background-color: #f2f2f2;
 		color: #000000;
 	}
 
 	/deep/.uni-forms-item__label {
-		font-size: 18px;
+		font-size: 34rpx;
 		height: auto;
 		color: #003366;
-		margin-bottom: 20px;
+		margin-bottom: 28rpx;
 	}
 
 	/deep/.uni-data-checklist .checklist-group .checklist-box .checklist-content .checklist-text {
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 32rpx;
+		line-height: 40rpx;
 	}
 
 	.fractureRiskPredictionTool {
-		padding-bottom: 20px;
+		padding-bottom: 35rpx;
 
 		.questionTitle {
 			text-align: right;
 			color: #858585;
-			line-height: 35px;
-			font-size: 16px;
+			line-height: 62rpx;
+			font-size: 34rpx;
 		}
 	}
 
 
 	.guideInformation {
-		font-size: 16px;
 		text-align: center;
 		color: #6a6a6a;
-		margin: 20px;
-		padding: 10px;
-		min-height: 100px;
+		margin: 40rpx;
+		padding: 20rpx;
+		min-height: 200rpx;
+		box-sizing: border-box;
 		background-color: #f1f1f1;
 
 		.guideInformationTitle {
-			font-size: 22px;
-			margin: 10px;
+			font-size: 40rpx;
+			margin: 20rpx;
 		}
 
 		.guideInformationContent {
-			font-size: 16px;
+			font-size: 32rpx;
 		}
 	}
 
-	.riskProfilAge, .BMDmodels {
-		margin-bottom: 10px;
+	.riskProfilAge,
+	.BMDmodels {
+		margin-bottom: 20rpx;
 	}
 
 	.btnList {
@@ -373,17 +374,17 @@
 		}
 
 		button {
-			margin: 0 10px;
+			margin: 0 20rpx;
 		}
 	}
 
 	/deep/.uni-section .uni-section-header__decoration.line {
 		position: absolute;
-		top: 20px;
+		top: 33rpx;
 	}
 
 	/deep/.uni-section .uni-section-header__content {
-		margin-left: 10px;
+		margin-left: 10rpx;
 	}
 
 	/deep/.uni-forms-item__label {

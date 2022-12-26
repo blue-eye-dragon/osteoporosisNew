@@ -30,7 +30,7 @@
 			</view>
 		</view>
 		<view class="content">
-			<uni-forms ref="baseForm" :modelValue="patientBaseFormData" labelWidth="80px" :border="!isEdit"
+			<uni-forms ref="baseForm" :modelValue="patientBaseFormData" labelWidth="150rpx" :border="!isEdit"
 				v-if="userType == 0">
 				<uni-forms-item label="姓名:">
 					<uni-easyinput v-model="patientBaseFormData.name" placeholder="请输入姓名" :disabled="!isEdit"
@@ -61,7 +61,7 @@
 						placeholder="请输入当前症状" :disabled="!isEdit" :inputBorder="isEdit" />
 				</uni-forms-item>
 			</uni-forms>
-			<uni-forms ref="baseForm" :modelValue="docBaseFormData" labelWidth="80px" :border="!isEdit"
+			<uni-forms ref="baseForm" :modelValue="docBaseFormData" labelWidth="150rpx" :border="!isEdit"
 				v-if="userType == 1">
 				<uni-forms-item label="姓名:">
 					<uni-easyinput v-model="docBaseFormData.name" placeholder="请输入姓名" :disabled="!isEdit"
@@ -167,7 +167,7 @@
 					height: 120,
 					border: {
 						color: "#eee", // 边框颜色
-						width: "1px", // 边框宽度
+						width: "1rpx", // 边框宽度
 						style: "solid", // 边框样式
 						radius: "50%" // 边框圆角，支持百分比
 					}
@@ -253,16 +253,19 @@
 </script>
 
 <style lang="less" scoped>
+	/deep/.uni-easyinput__content-textarea {
+		margin-left: 6px;
+	}
 	.personalData {
 		.personTitle {
-			height: 170px;
+			height: 280rpx;
 			display: flex;
-			border-bottom: 1px solid #f1f1f1;
+			border-bottom: 1rpx solid #f1f1f1;
 
 			.personTitleImg {
-				width: 150px;
+				width: 240rpx;
 				text-align: center;
-				padding-top: 30px;
+				padding-top: 30rpx;
 
 				/deep/ .uni-file-picker {
 					display: flex;
@@ -270,12 +273,12 @@
 				}
 
 				.changeImg {
-					margin-top: 5px;
-					padding: 2px 4px;
+					margin-top: 5rpx;
+					padding: 2rpx 4rpx;
 					color: #b5b5b5;
-					font-size: 12px;
+					font-size: 12rpx;
 					display: inline-block;
-					border: 1px solid #b5b5b5;
+					border: 1rpx solid #b5b5b5;
 				}
 			}
 
@@ -284,9 +287,9 @@
 
 				.personName {
 					display: flex;
-					margin-top: 20px;
-					margin-bottom: 5px;
-					font-size: 22px;
+					margin-top: 45rpx;
+					margin-bottom: 10rpx;
+					font-size: 44rpx;
 				}
 
 				.personTags {
@@ -296,16 +299,16 @@
 						display: flex;
 						align-content: flex-start;
 						flex-wrap: wrap;
-						font-size: 13px;
-						max-width: 220px;
-						height: 65px;
-						padding: 5px;
+						box-sizing: border-box;
+						font-size: 25rpx;
+						height: 120rpx;
+						padding: 10rpx;
 						overflow-y: auto;
 
 						.tag-view {
-							font-size: 10px;
-							margin-right: 5px;
-							margin-bottom: 5px;
+							font-size: 20rpx;
+							margin-right: 10rpx;
+							margin-bottom: 10rpx;
 						}
 					}
 				}
@@ -313,22 +316,22 @@
 		}
 
 		.content {
-			padding: 20px;
-			border-top: 8px solid #f1f1f1;
+			padding: 20rpx;
+			border-top: 15rpx solid #f1f1f1;
 		}
 
 		.inputDialog {
-			padding: 20px;
-			width: 280px;
+			padding: 20rpx;
+			width: 540rpx;
 			background-color: #ffffff;
 
 			.inputDialogTitle {
-				margin: 10px 0;
-				font-size: 14px;
+				margin: 20rpx 0;
+				font-size: 26rpx;
 			}
 
 			.addPlanFormBtn {
-				margin-top: 20px;
+				margin-top: 20rpx;
 				display: flex;
 				justify-content: space-around;
 			}
