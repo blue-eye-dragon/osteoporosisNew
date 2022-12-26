@@ -262,8 +262,10 @@
 		}, {
 			"path": "pages/serverPages/serverPages",
 			"style": {
-				"navigationBarTitleText": "",
-				"navigationStyle": "custom"
+				"navigationBarTitleText": "肌少-骨质疏松服务",
+				"navigationBarBackgroundColor": "#1a9def",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
 			}
 
 		}, {
@@ -384,7 +386,7 @@
 		}, {
 			"path": "pages/serverPages/selfAssessment/riskFactorTest/riskFactorTest",
 			"style": {
-				"navigationBarTitleText": "危险因素测试",
+				"navigationBarTitleText": "骨质疏松风险测试",
 				"navigationBarBackgroundColor": "#1a9def",
 				"navigationBarTextStyle": "white",
 				"enablePullDownRefresh": false
@@ -512,6 +514,12 @@
 				"text": "服务",
 				"iconPath": "static/images/server.png",
 				"selectedIconPath": "static/images/selectedServer.png"
+			},
+			{
+				"pagePath": "pages/healthGuide/sportClockIn/sportClockIn",
+				"text": "互动",
+				"iconPath": "static/images/healthGuide.png",
+				"selectedIconPath": "static/images/selectedHealthGuide.png"
 			},
 			{
 				"pagePath": "pages/healthGuide/healthGuide",

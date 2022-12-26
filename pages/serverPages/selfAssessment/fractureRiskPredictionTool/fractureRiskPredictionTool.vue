@@ -4,7 +4,7 @@
 			titleFontSize="18px" subTitleFontSize="14px">
 			<uni-forms label-position="top" :modelValue="riskProfileForm" ref="form4" labelWidth="auto">
 				<view class="questionTitle" v-if="!isSubmit">
-					问题{{selectNum}}
+					问题{{selectNum}}/共{{allItemNum}}问
 				</view>
 				<uni-forms-item label="年龄或出生日期（40-90年之间）" v-if="selectNum == 1 || isSubmit">
 					<view class="riskProfilAge">
@@ -328,8 +328,9 @@
 		padding-bottom: 20px;
 
 		.questionTitle {
-			text-align: center;
-			line-height: 30px;
+			text-align: right;
+			color: #858585;
+			line-height: 35px;
 			font-size: 16px;
 		}
 	}
@@ -342,7 +343,7 @@
 		margin: 20px;
 		padding: 10px;
 		min-height: 100px;
-		background-color: #fff1e5;
+		background-color: #f1f1f1;
 
 		.guideInformationTitle {
 			font-size: 22px;

@@ -71,3 +71,7 @@ button-hover[type=primary] {
 .uni-table-td,.uni-table-th {
 	font-size: 18px !important;
 }
+
+.guideInformation {
+	font-family:"黑体"
+}

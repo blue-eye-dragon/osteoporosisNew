@@ -21,6 +21,7 @@
 						'uni-noticebar__content-text--single': !scrollable && (single || showGetMore)
 					}" 
 					:style="{
+						fontWeight: fontWeight,
 						color: color,
 						fontSize: fontSize + 'px',
 						lineHeight: fontSize * 1.5 + 'px',
@@ -86,7 +87,7 @@
 			},
 			backgroundColor: {
 				type: String,
-				default: '#FFF9EA'
+				default: ''
 			},
 			speed: {
 				// 默认1s滚动100px
@@ -100,6 +101,10 @@
 			fontSize: {
 				type: Number,
 				default: 14
+			},
+			fontWeight: {
+				type: Number,
+				default: 500
 			},
 			moreColor: {
 				type: String,

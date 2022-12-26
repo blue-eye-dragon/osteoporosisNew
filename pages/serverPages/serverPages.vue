@@ -1,7 +1,7 @@
 <template>
-	<view class="main serverPages">
-		<top-tabbar></top-tabbar>
-		<view class="bgImage" v-if="userType == 1"></view>
+	<view class="serverPages">
+		<!-- <top-tabbar></top-tabbar> -->
+		<!-- <view class="bgImage" v-if="userType == 1"></view> -->
 		<tab-bar :userIdentity="userType" :selected="0"></tab-bar>
 		<view class="functionModule" v-if="userType == 1">
 			<view class="module bgImage" @click="doctorModule(0)">量表评估</view>
@@ -34,8 +34,9 @@
 				</swiper-item>
 			</swiper> -->
 		<view class="patientsServer" v-if="userType == 0">
-			<uni-section title="功能模块" titleFontSize="18px" type="line">
+			<uni-section title="功能模块" titleFontSize="30rpx" type="line">
 				<view class="gridBox">
+					
 					<uni-grid :column="3" :highlight="true" @change="changeGrid" :showBorder="false">
 						<uni-grid-item v-for="(item,index) in swiperList" :index="index" :key="item.id" :height="100">
 							<view class="grid-item-box" style="background-color: #fff;">
@@ -46,7 +47,7 @@
 					</uni-grid>
 				</view>
 			</uni-section>
-			<uni-section title="健康知识" titleFontSize="18px" type="line">
+			<uni-section title="健康知识" titleFontSize="30rpx" type="line">
 				<!-- <template v-slot:right>
 					<view class="" @click="moreNews()">
 						更多新闻 >
@@ -67,7 +68,7 @@
 							</template>
 							<template v-slot:footer>
 								<image class="slot-image" :src="item.imgSrc" mode="scaleToFill"
-									style="width: 120px; height: 80px;"></image>
+									style="width: 180rpx; height: 120rpx;"></image>
 							</template>
 						</uni-list-item>
 					</uni-list>
@@ -83,13 +84,13 @@
 		mapState
 	} from "vuex"
 	import tabBar from "@/components/tab-bar/tab-bar.vue"
-	import topTabbar from '@/components/topTabbar/topTabbar.vue'
+	// import topTabbar from '@/components/topTabbar/topTabbar.vue'
 	import carousel from '@/components/vear-carousel/vear-carousel'
 	export default {
 		mixins: [mixins],
 		components: {
 			tabBar,
-			topTabbar,
+			// topTabbar,
 			carousel
 		},
 		data() {
@@ -248,25 +249,39 @@
 </script>
 
 <style lang="less" scoped>
+	
+	/deep/.uni-list-item__container {
+		align-items: center;
+	}
 	/deep/.uni-section-header__slot-right {
 		color: #9e9e9e;
 	}
 
 	/deep/.uni-section {
-		box-shadow: 2px 2px 2px 2px #cecece;
+		border-radius: 20rpx;
+		overflow: hidden;
+		margin-bottom: 20rpx;
+		box-shadow: 2rpx 2rpx 2rpx 2rpx #cecece;
 	}
 
 	/deep/.uni-easyinput {
-		border-radius: 50px;
+		border-radius: 50rpx;
 		overflow: hidden;
+	}
+	
+	.serverPages {
+		height: 100vh;
+		background-color: #edf7ff;
 	}
 
 	.swiperItem {
-		padding: 20px;
+		padding: 20rpx;
+		
+		padding-top: 5rpx;
 		box-sizing: border-box;
 
 		.swiperItemImg {
-			border-radius: 30px;
+			border-radius: 30rpx;
 		}
 	}
 
@@ -274,7 +289,6 @@
 	.swiperBox {
 		width: 100%;
 		position: relative;
-		background-color: #edf7ff;
 
 		.swiperContent {
 			width: 100%;
@@ -283,20 +297,19 @@
 
 
 			.swiper {
-				height: 200px;
+				height: 300rpx;
 			}
 		}
 
 		.swiperBg1 {
 			background: linear-gradient(180deg, #1a9def, #75c4f5);
-			height: 100px;
-			padding: 10px 20px;
-			border-radius: 0 0 30px 30px;
+			height: 200rpx;
+			padding: 10rpx 20rpx;
+			border-radius: 0 0 30rpx 30rpx;
 		}
 
 		.swiperBg2 {
-			height: 80px;
-			background-color: #edf7ff;
+			height: 80rpx;
 		}
 	}
 
@@ -310,33 +323,31 @@
 	}
 
 	.patientsServer {
-		padding: 0px 20px 10px;
-		background-color: #edf7ff;
+		padding: 0rpx 20rpx 10rpx;
 	}
 
 	.functionModule {
-		padding: 20px;
+		padding: 20rpx;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 
 		.module {
 			width: 70%;
-			height: 60px;
-			margin: 20px 0;
+			height: 60rpx;
+			margin: 20rpx 0;
 			color: #ffffff;
 			display: flex;
-			font-size: 20px;
+			font-size: 20rpx;
 			font-weight: 600;
 			justify-content: center;
 			align-items: center;
-			box-shadow: 5px 3px 10px 0px #1a9def;
+			box-shadow: 5rpx 3rpx 10rpx 0rpx #1a9def;
 		}
 	}
 
 	.gridBox {
-		border-top: 0.5px solid #e1e1e1;
-		margin-bottom: 10px;
+		border-top: 0.5rpx solid #e1e1e1;
 
 		.grid-item-box {
 			flex: 1;
@@ -349,7 +360,7 @@
 			justify-content: space-evenly;
 
 			/deep/.uni-icons {
-				padding: 10px;
+				padding: 20rpx;
 				border-radius: 50%;
 				color: #ffffff !important;
 				background-image: linear-gradient(to right, #81c8f3, #237ef9);
@@ -363,7 +374,7 @@
 		display: flex;
 		/* #endif */
 		flex: 1;
-		margin-right: 10px;
+		margin-right: 10rpx;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
@@ -375,25 +386,26 @@
 
 		.slot-box-content {
 			width: 100%;
-			font-size: 12px;
+			font-size: 25rpx;
 			color: #9e9e9e;
 			display: flex;
+			margin-top: 20rpx;
 
 			.slot-box-content-name {
 				flex: 1;
 			}
 
 			.slot-box-content-time {
-				width: 80px;
+				width: 150rpx;
 				text-align: right;
 			}
 		}
 	}
 
 	.scroll-Y {
-		height: calc(100vh - 510px);
+		height: calc(100vh - 510rpx);
 		/* #ifdef MP */
-		height: calc(100vh - 550px - env(safe-area-inset-bottom))
+		height: calc(100vh - 820rpx - env(safe-area-inset-bottom))
 			/* #endif */
 	}
 
@@ -401,8 +413,8 @@
 		/* #ifndef APP-NVUE */
 		display: block;
 		/* #endif */
-		margin-right: 10px;
-		width: 120px;
-		height: 80px
+		margin-right: 10rpx;
+		width: 120rpx;
+		height: 80rpx
 	}
 </style>

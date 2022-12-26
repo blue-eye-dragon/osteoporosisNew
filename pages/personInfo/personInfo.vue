@@ -199,28 +199,31 @@
 
 <style lang="less" scoped>
 	/deep/ .uni-list-item__content-title {
-		font-size: 18px;
+		font-size: 30rpx;
+	}
+	/deep/.uni-list-item__extra-text {
+		font-size: 32rpx;
 	}
 
 	.OrdersClass {
-		border-bottom: 1px solid #909399;
+		border-bottom: 1rpx solid #909399;
 	}
 
 	.u-cell-group {
-		border-top: 5px solid #e0e0e0;
+		border-top: 5rpx solid #e0e0e0;
 	}
 
 	.grid-text {
-		font-size: 16px;
+		font-size: 30rpx;
 		color: #909399;
-		padding: 10rpx 0 20rpx 0rpx;
+		padding-top: 15rpx;
 		/* #ifndef APP-PLUS */
 		box-sizing: border-box;
 		/* #endif */
 	}
 
 	.scroll-Y {
-		height: calc(100vh - 470px);
+		height: calc(100vh - 470rpx);
 	}
 
 	.grid-item-box {
@@ -232,10 +235,10 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 15px 0;
+		padding: 15rpx 0;
 
 		.iconSize {
-			font-size: 25px;
+			font-size: 25rpx;
 		}
 	}
 
@@ -244,16 +247,17 @@
 		padding-top: ;
 
 		.personInfo {
-			min-height: 100px;
+			min-height: 300rpx;
 			position: relative;
-			padding: 20px;
+			padding: 40rpx;
 			background: linear-gradient(180deg, #1a9def, #75c4f5);
 			display: flex;
 			align-items: center;
+			box-sizing: border-box;
 
 			.personImg {
-				width: 100px;
-				height: 100px;
+				width: 200rpx;
+				height: 200rpx;
 				border-radius: 50%;
 				overflow: hidden;
 
@@ -265,38 +269,38 @@
 
 			.personMsg {
 				color: aliceblue;
-				width: calc(100% - 140px);
-				padding: 20px;
-				height: 100px;
+				flex: 1;
+				padding: 20rpx;
+				height: 200rpx;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-evenly;
 
 				.name {
-					font-size: 20px;
+					font-size: 40rpx;
 
 					span {
-						font-size: 14px;
-						margin-left: 10px;
+						font-size: 28rpx;
+						margin-left: 20rpx;
 						color: #fbff00;
 					}
 
 					.lVspan {
-						font-size: 6px;
-						margin-left: 10px;
+						font-size: 18rpx;
+						margin-left: 20rpx;
 						color: #000000;
-						padding: 1px 5px;
-						border-radius: 5px;
+						padding: 1rpx 5rpx;
+						border-radius: 5rpx;
 						background-color: #fbff00;
 					}
 				}
 
 				.position {
-					font-size: 14px;
+					font-size: 14rpx;
 
 					.membershipGrade {
-						margin: 5px 0;
-						font-size: 12px;
+						margin: 10rpx 0;
+						font-size: 24rpx;
 						color: #ffffff;
 					}
 				}
@@ -304,23 +308,23 @@
 
 			.personalData {
 				position: absolute;
-				font-size: 12px;
-				right: -7px;
+				font-size: 24rpx;
+				right: 0rpx;
 				color: #ffffff;
-				padding: 3px 11px;
-				border-radius: 15px;
+				padding: 6rpx 17rpx;
+				border-radius: 30rpx;
 				background-color: #1f80e8;
 			}
 		}
 
 		.cellImg {
-			width: 22px;
-			height: 22px;
+			width: 22rpx;
+			height: 22rpx;
 		}
 	}
 
 	.listBox {
-		max-height: 500px;
+		max-height: 500rpx;
 		overflow-y: auto;
 	}
 </style>

@@ -1,40 +1,70 @@
 <template>
 	<view class="nutritionClockIn">
 		<view class="nutritionClockTop">
+			<span class="nutritionClockRecord" @click="nutritionClockRecord">
+				打卡记录
+			</span>
 			<view class="nutritionClockTopText">
 				<span>健康</span>生活每一天
 			</view>
 		</view>
 		<view class="serverList">
-			<span class="nutritionClockRecord" @click="nutritionClockRecord">
-				打卡记录
-			</span>
-			<view class="serverListTitle">
-				<i class="iconfont serverListIcon color0" v-html="'&#xe6ea;'"></i>
-				<div>早餐</div>
+			<view class="serverListNutrition">
+				<view class="serverListTitle">
+					<view class="serverListTitleTop">
+						<view class="serverListIcon color0">
+							<uni-icons custom-prefix="iconfont" color="#ffffff" type="icon-zaocan" size="16">
+							</uni-icons>
+						</view>
+						12月7日(周三) <span class="nutritionType">早餐</span>
+					</view>
+					<view class="serverListTitleSub">
+						高静静 <span class="serverListSubTime">发布于12-06 11:06</span>
+					</view>
+				</view>
+				<uni-easyinput type="textarea" v-model="breakfast" placeholder="请输入内容" />
+				<view class="serverListButton">
+					<button type="primary" v-if="!nutritionClock.breakfast" @click="clockIn('breakfast')">打卡</button>
+					<button type="primary" disabled v-else>已打卡</button>
+				</view>
 			</view>
-			<uni-easyinput type="textarea" v-model="breakfast" placeholder="请输入内容" />
-			<view class="serverListButton">
-				<button type="primary" v-if="!nutritionClock.breakfast" @click="clockIn('breakfast')">打卡</button>
-				<button type="primary" disabled v-else>已打卡</button>
+			<view class="serverListNutrition">
+				<view class="serverListTitle">
+					<view class="serverListTitleTop">
+						<view class="serverListIcon color1">
+							<uni-icons custom-prefix="iconfont" color="#ffffff" type="icon-wucan" size="16">
+							</uni-icons>
+						</view>
+						12月7日(周三) <span class="nutritionType">午餐</span>
+					</view>
+					<view class="serverListTitleSub">
+						高静静 <span class="serverListSubTime">发布于12-06 11:06</span>
+					</view>
+				</view>
+				<uni-easyinput type="textarea" v-model="lunch" placeholder="请输入内容" />
+				<view class="serverListButton">
+					<button type="primary" v-if="!nutritionClock.lunch" @click="clockIn('lunch')">打卡</button>
+					<button type="primary" disabled v-else>已打卡</button>
+				</view>
 			</view>
-			<view class="serverListTitle">
-				<i class="iconfont serverListIcon color1" v-html="'&#xe6e8;'"></i>
-				<div>午餐</div>
-			</view>
-			<uni-easyinput type="textarea" v-model="lunch" placeholder="请输入内容" />
-			<view class="serverListButton">
-				<button type="primary" v-if="!nutritionClock.lunch" @click="clockIn('lunch')">打卡</button>
-				<button type="primary" disabled v-else>已打卡</button>
-			</view>
-			<view class="serverListTitle">
-				<i class="iconfont serverListIcon color2" v-html="'&#xe6e7;'"></i>
-				<div>晚餐</div>
-			</view>
-			<uni-easyinput type="textarea" v-model="dinner" placeholder="请输入内容" />
-			<view class="serverListButton">
-				<button type="primary" v-if="!nutritionClock.dinner" @click="clockIn('dinner')">打卡</button>
-				<button type="primary" disabled v-else>已打卡</button>
+			<view class="serverListNutrition">
+				<view class="serverListTitle">
+					<view class="serverListTitleTop">
+						<view class="serverListIcon color2">
+							<uni-icons custom-prefix="iconfont" color="#ffffff" type="icon-wancan" size="16">
+							</uni-icons>
+						</view>
+						12月7日(周三) <span class="nutritionType">晚餐</span>
+					</view>
+					<view class="serverListTitleSub">
+						高静静 <span class="serverListSubTime">发布于12-06 11:06</span>
+					</view>
+				</view>
+				<uni-easyinput type="textarea" v-model="dinner" placeholder="请输入内容" />
+				<view class="serverListButton">
+					<button type="primary" v-if="!nutritionClock.dinner" @click="clockIn('dinner')">打卡</button>
+					<button type="primary" disabled v-else>已打卡</button>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -74,36 +104,91 @@
 	.nutritionClockIn {
 		width: 100%;
 		display: flex;
+		background-color: #edf7ff;
 		flex-direction: column;
 		align-items: center;
 		padding-bottom: 30px;
 
 		.nutritionClockTop {
 			width: 100%;
-			height: 200px;
+			height: 100px;
+			padding: 10px 0;
+			border-radius: 0 0 30px 30px;
 			position: relative;
-			background-image: linear-gradient(#1a9def, #9bd9ff);
+			background: linear-gradient(180deg, #1a9def, #75c4f5);
 
 			.nutritionClockTopText {
-				font-size: 35px;
+				font-size: 25px;
 				color: #ffffff;
-				margin: 40px auto;
+				margin: 15px auto;
 				text-align: center;
 
 				span {
 					color: #f0cd34;
 				}
 			}
+
+			.nutritionClockRecord {
+				position: absolute;
+				top: 10px;
+				right: 5px;
+				display: inline-block;
+				color: #ffffff;
+				padding: 6px 9px;
+				background-color: #008adf;
+			}
+
 		}
 
 		.serverList {
 			width: 90%;
-			margin-top: -80px;
-			padding: 10px 5px 30px;
-			border-radius: 30px;
-			background-color: #ffffff;
+			margin-top: -40px;
 			overflow: hidden;
 			position: relative;
+
+			.serverListNutrition {
+				background-color: #ffffff;
+				border-radius: 30px;
+				overflow: hidden;
+				margin-bottom: 20px;
+				padding: 10px 20px;
+
+				.serverListTitle {
+					font-size: 18px;
+					margin: 10px;
+					border-bottom: 0.5px solid #c6c6c6;
+
+					.serverListTitleTop {
+						display: flex;
+
+						.serverListIcon {
+							width: 25px;
+							height: 25px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							border-radius: 50%;
+							margin-right: 5px;
+							color: #ffffff;
+						}
+
+						.nutritionType {
+							margin-left: 10px;
+						}
+					}
+
+
+					.serverListTitleSub {
+						font-size: 12px;
+						line-height: 30px;
+						color: #9e9e9e;
+
+						.serverListSubTime {
+							margin-left: 10px;
+						}
+					}
+				}
+			}
 
 			.nutritionClockRecord {
 				position: absolute;
@@ -115,20 +200,6 @@
 				background-color: #1a9def;
 			}
 
-			.serverListTitle {
-				font-size: 18px;
-				padding: 10px 20px;
-				display: flex;
-				align-items: center;
-
-				.serverListIcon {
-					font-size: 18px;
-					padding: 5px;
-					border-radius: 50%;
-					margin-right: 10px;
-					color: #ffffff;
-				}
-			}
 
 			.serverListButton {
 				margin: 20px auto 10px;

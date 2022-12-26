@@ -49,42 +49,42 @@
 		},
 		data() {
 			return {
-				color: "#333333",
+				color: "#909090",
 				selectedColor: "#1a9def",
 				doctorServer: {
 					"pagePath": "/pages/serverPages/serverPages",
 					"text": "患者管理",
-					"iconPath": "../../static/images/server.png",
+					"iconPath": "../../static/images/server1.png",
 					"selectedIconPath": "../../static/images/selectedServer.png"
 				},
 				patientServer: {
 					"pagePath": "/pages/serverPages/serverPages",
 					"text": "首页",
-					"iconPath": "../../static/images/server.png",
+					"iconPath": "../../static/images/server1.png",
 					"selectedIconPath": "../../static/images/selectedServer.png"
 				},
 				healthGuide: {
 					"pagePath": "/pages/healthGuide/healthGuide",
 					"text": "健康指导",
-					"iconPath": "../../static/images/healthGuide.png",
+					"iconPath": "../../static/images/healthGuide1.png",
 					"selectedIconPath": "../../static/images/selectedHealthGuide.png"
 				},
 				patientChat: {
-					"pagePath": "/pages/healthGuide/healthGuide",
+					"pagePath": "/pages/healthGuide/sportClockIn/sportClockIn",
 					"text": "打卡",
-					"iconPath": "../../static/images/healthClock.png",
+					"iconPath": "../../static/images/healthClock1.png",
 					"selectedIconPath": "../../static/images/selectedHealthClock.png"
 				},
 				doctorInfo: {
 					"pagePath": "/pages/personInfo/personInfo",
 					"text": "个人中心",
-					"iconPath": "../../static/images/person.png",
+					"iconPath": "../../static/images/person1.png",
 					"selectedIconPath": "../../static/images/selectedPerson.png"
 				},
 				patientInfo: {
 					"pagePath": "/pages/personInfo/personInfo",
 					"text": "我的",
-					"iconPath": "../../static/images/person.png",
+					"iconPath": "../../static/images/person1.png",
 					"selectedIconPath": "../../static/images/selectedPerson.png"
 				}
 			}

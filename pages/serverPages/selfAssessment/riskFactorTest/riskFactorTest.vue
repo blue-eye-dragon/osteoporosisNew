@@ -1,11 +1,11 @@
 <template>
 	<view class="riskFactorTest">
-		<uni-section title="危险因素测试" subTitle="国际骨质疏松症基金会（IOF）一分钟危险因素测试,一道题答“是”即为高危人群" type="line" padding
+		<uni-section title="骨质疏松风险测试" subTitle="IOF骨质疏松症风险检查旨在作为一种工具来提高人们对已知会增加骨质疏松症和骨折风险的因素的认知识。此风险检查不是诊断工具：只有医生才能诊断出骨质疏松症。尽管答复是根据您提供的资讯产信息生成的，但它们基本本质上是一般性的，可能与您的个人情况无关。请谘询医生以讨论您可能遇到的任何问题或疑虑。" type="line" padding
 			titleFontSize="18px" subTitleFontSize="14px">
 			<!-- 注意，如果需要兼容微信小程序，最好通过setRules方法设置rules规则 -->
 			<uni-forms label-position="top" :modelValue="riskFactorsForm" ref="form4" labelWidth="auto">
 				<view class="questionTitle" v-if="!isSubmit">
-					问题{{selectNum}}
+					问题{{selectNum}}/共{{allItemNum}}问
 				</view>
 				<uni-forms-item label="您是否已超过60岁（含）？" v-if="selectNum == 1 || isSubmit">
 					<uni-data-checkbox v-model="riskFactorsForm.form1" :localdata="whetherNotList" mode="list"
@@ -16,7 +16,7 @@
 						</uni-data-checkbox>
 					</view>
 				</uni-forms-item>
-				<uni-forms-item label="您在50岁以后是否发生过骨折" v-if="selectNum == 2 || isSubmit">
+				<uni-forms-item label="您在50岁以后是否发生过骨折?" v-if="selectNum == 2 || isSubmit">
 					<uni-data-checkbox v-model="riskFactorsForm.form2" :localdata="whetherNotList" mode="list"
 						:disabled="flag =='look' || iscomplete" />
 				</uni-forms-item>
@@ -42,8 +42,14 @@
 							BMI结果：
 						</view>{{BMIResult}}
 					</view>
+					<view class="resultStyle" v-if="BMIResult < 19">
+						是的，我体重过轻
+					</view>
+					<view class="resultStyle" v-if="BMIResult >= 19">
+						不，我没有体重过轻
+					</view>
 				</uni-forms-item>
-				<uni-forms-item label="40岁以后,您的身高下降是否超过4厘米(约1.5英寸)" v-if="selectNum == 4 || isSubmit">
+				<uni-forms-item label="40岁以后,您的身高下降是否超过4厘米(约1.5英寸)?" v-if="selectNum == 4 || isSubmit">
 					<uni-data-checkbox v-model="riskFactorsForm.form3" :localdata="whetherNotList1" mode="list"
 						:disabled="flag =='look' || iscomplete" />
 				</uni-forms-item>
@@ -54,18 +60,18 @@
 				<uni-forms-item label="您是否患有下列疾病？" v-if="selectNum == 6 || isSubmit">
 					<uni-data-checkbox mode="list" :multiple="true" v-model="riskFactorsForm.form5"
 						:localdata="diseaseList1" :disabled="flag =='look' || iscomplete" @change="changeDisease1" />
-					<uni-data-checkbox mode="list" :multiple="true" v-model="riskFactorsForm.form6"
-						:localdata="diseaseList2" :disabled="flag =='look' || iscomplete" @change="changeDisease2" />
-					<uni-data-checkbox mode="list" :multiple="true" v-model="riskFactorsForm.form7"
-						:localdata="diseaseList3" :disabled="flag =='look' || iscomplete" @change="changeDisease3" />
+					<uni-data-checkbox mode="list" v-model="riskFactorsForm.form6" :localdata="diseaseList2"
+						:disabled="flag =='look' || iscomplete" @change="changeDisease2" />
+					<uni-data-checkbox mode="list" v-model="riskFactorsForm.form7" :localdata="diseaseList3"
+						:disabled="flag =='look' || iscomplete" @change="changeDisease3" />
 				</uni-forms-item>
 				<uni-forms-item label="您是否接受过以下药物治疗？" v-if="selectNum == 7 || isSubmit">
 					<uni-data-checkbox mode="list" :multiple="true" v-model="riskFactorsForm.form8"
 						:localdata="drugList1" :disabled="flag =='look' || iscomplete" @change="changedrug1" />
-					<uni-data-checkbox mode="list" :multiple="true" v-model="riskFactorsForm.form9"
-						:localdata="diseaseList2" :disabled="flag =='look' || iscomplete" @change="changedrug2" />
-					<uni-data-checkbox mode="list" :multiple="true" v-model="riskFactorsForm.form10"
-						:localdata="diseaseList3" :disabled="flag =='look' || iscomplete" @change="changedrug3" />
+					<uni-data-checkbox mode="list" v-model="riskFactorsForm.form9" :localdata="diseaseList2"
+						:disabled="flag =='look' || iscomplete" @change="changedrug2" />
+					<uni-data-checkbox mode="list" v-model="riskFactorsForm.form10" :localdata="diseaseList3"
+						:disabled="flag =='look' || iscomplete" @change="changedrug3" />
 				</uni-forms-item>
 
 				<uni-forms-item label="您是否过量饮酒（每天超过3个单位）和/或目前是否吸烟？" v-if="selectNum == 8 || isSubmit">
@@ -90,7 +96,6 @@
 				60岁以上？
 			</view>
 			<view class="guideInformationContent">
-				身体质量指数（BMI）小于19 kg/m2（相当于19 lbs/in2）
 				骨质疏松风险随着年龄的增长而增加。如果您是60岁或以上的女性，或70岁或以上的男性，即使您并无其他临床风险因素，也应该在下次体检时和医生讨论骨骼健康问题
 			</view>
 		</view>
@@ -107,7 +112,8 @@
 				体重过轻？
 			</view>
 			<view class="guideInformationContent">
-				身体质量指数（BMI）小于19 kg/m2（相当于19 lbs/in2） 是骨质疏松症的风险因素。体重过轻会导致女孩和女性雌激素水平较低，类似于绝经后，这可能会导致骨质疏松症的发生。与此同时，身体虚弱的人骨折的风险更高
+				身体质量指数（BMI）小于19 kg/m2（相当于19 lbs/in2）
+				是骨质疏松症的风险因素。体重过轻会导致女孩和女性雌激素水平较低，类似于绝经后，这可能会导致骨质疏松症的发生。与此同时，身体虚弱的人骨折的风险更高
 			</view>
 		</view>
 		<view class="guideInformation" v-if="selectNum == 4 && !isSubmit">
@@ -145,7 +151,7 @@
 		<view class="guideInformation" v-if="selectNum == 8 && !isSubmit">
 			<view class="guideInformationTitle">
 				是否过量饮酒？
-			</view> 
+			</view>
 			<view class="guideInformationContent">
 				饮酒过量会对骨骼健康产生负面影响，还会导致频繁跌倒，从而增加骨折的风险。
 			</view>
@@ -172,10 +178,17 @@
 				riskFactorsForm: {
 					weight: null,
 					height: null,
-					form2: [],
-					form3: [],
-					form4: [],
-					form5: []
+					// form1: '',
+					form2: '',
+					form3: '',
+					form4: '',
+					form5: [],
+					form6: '',
+					form7: '',
+					form8: [],
+					form9: '',
+					form10: '',
+					form11: ''
 				},
 
 				whetherNotList: [{
@@ -305,38 +318,42 @@
 				uni.navigateBack()
 			},
 			inputWeight() {
+				let num = 0
 				if (this.riskFactorsForm.height && this.riskFactorsForm.height != 0) {
-					this.BMIResult = (this.riskFactorsForm.weight) / (this.riskFactorsForm.height * 2)
+					num = (this.riskFactorsForm.weight) / (Math.pow((this.riskFactorsForm.height * 0.01), 2))
+					this.BMIResult = Number(num).toFixed(2)
 				}
 			},
 			inputHeight() {
+				let num = 0
 				if (this.riskFactorsForm.weight && this.riskFactorsForm.weight != 0) {
-					this.BMIResult = (this.riskFactorsForm.weight) / ((this.riskFactorsForm.height * 0.01) * 2)
+					num = (this.riskFactorsForm.weight) / (Math.pow((this.riskFactorsForm.height * 0.01), 2))
+					this.BMIResult = Number(num).toFixed(2)
 				}
 			},
 			changeDisease1(e) {
-				this.riskFactorsForm.form4 = []
-				this.riskFactorsForm.form5 = []
+				this.riskFactorsForm.form6 = ''
+				this.riskFactorsForm.form7 = ''
 			},
 			changeDisease2(e) {
-				this.riskFactorsForm.form3 = []
 				this.riskFactorsForm.form5 = []
+				this.riskFactorsForm.form7 = ''
 			},
 			changeDisease3(e) {
-				this.riskFactorsForm.form3 = []
-				this.riskFactorsForm.form4 = []
+				this.riskFactorsForm.form5 = []
+				this.riskFactorsForm.form6 = ''
 			},
 			changedrug1() {
-				this.riskFactorsForm.form7 = []
-				this.riskFactorsForm.form8 = []
+				this.riskFactorsForm.form9 = ''
+				this.riskFactorsForm.form10 = ''
 			},
 			changedrug2() {
-				this.riskFactorsForm.form6 = []
 				this.riskFactorsForm.form8 = []
+				this.riskFactorsForm.form10 = ''
 			},
 			changedrug3() {
-				this.riskFactorsForm.form6 = []
-				this.riskFactorsForm.form7 = []
+				this.riskFactorsForm.form8 = []
+				this.riskFactorsForm.form9 = ''
 			}
 		}
 	}
@@ -396,12 +413,21 @@
 
 	.riskFactorTest {
 		padding-bottom: 20px;
-
 		.questionTitle {
-			text-align: center;
-			line-height: 30px;
+			text-align: right;
+			color: #858585;
+			line-height: 35px;
 			font-size: 16px;
 		}
+	}
+
+	.resultStyle {
+		width: 100%;
+		color: #ffffff;
+		font-size: 20px;
+		line-height: 25px;
+		padding: 5px 0;
+		background-color: #faa836;
 	}
 
 	.ageRange {
@@ -427,7 +453,7 @@
 		margin: 20px;
 		padding: 10px;
 		min-height: 100px;
-		background-color: #fff1e5;
+		background-color: #f1f1f1;
 
 		.guideInformationTitle {
 			font-size: 22px;

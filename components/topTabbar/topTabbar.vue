@@ -25,13 +25,13 @@
 		<!-- 微信端 topbar -->
 		<!--#ifdef MP-->
 		<uni-nav-bar background-color="#1a9def" :border="false"></uni-nav-bar>
-		<uni-nav-bar color="#ffffff" background-color="#1a9def" @clickLeft="personInfo" :border="false" :leftWidth="35">
-			<block slot="left">
+		<uni-nav-bar color="#ffffff" background-color="#1a9def" @clickLeft="personInfo" :border="false" :leftWidth="0">
+			<!-- <block slot="left">
 				<view class="leftIcon">
 					<image style="width: 35px; height: 35px; border-radius: 50%;"
 						src="https://s1.ax1x.com/2022/11/24/zJpAMT.png" mode="scaleToFill"></image>
 				</view>
-			</block>
+			</block> -->
 			<view class="title-view">
 				肌少-骨质疏松服务
 			</view>

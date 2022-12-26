@@ -97,7 +97,7 @@
 		margin: 20px;
 		padding: 10px;
 		min-height: 100px;
-		background-color: #fff1e5;
+		background-color: #f1f1f1;
 	}
 
 	.btnList {
