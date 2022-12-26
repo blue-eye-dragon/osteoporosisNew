@@ -6,7 +6,7 @@
 					<view class="selectModule">
 						<uni-data-select v-model="noClockInDays" :localdata="rangeDays" @change="change"></uni-data-select>
 					</view>
-					<button size="mini" type="primary">搜索</button>
+					<button size="mini" type="basics">搜索</button>
 				</view>
 			</uni-section>
 
@@ -25,7 +25,7 @@
 				<uni-td align="center">{{ item.lastTime }}</uni-td>
 				<!-- <uni-td align="center">
 					<view class="uni-group">
-						<button class="uni-button" size="mini" type="primary"
+						<button class="uni-button" size="mini" type="basics"
 							@click="messageRemind(item.id)">提醒</button>
 					</view>
 				</uni-td> -->
@@ -37,7 +37,7 @@
 				@change="pageChange" />
 		</view>	
 		<view class="remindBtn">
-			<button type="primary" @click="messageRemind">消息提醒</button>
+			<button type="basics" @click="messageRemind">消息提醒</button>
 		</view>
 		<view>
 			<uni-popup ref="alertDialog" type="dialog">

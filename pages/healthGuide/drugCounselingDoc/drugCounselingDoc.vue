@@ -5,7 +5,7 @@
 				<uni-easyinput suffixIcon="search" v-model="chatSearch" placeholder="请输入要搜索的内容" @iconClick="iconClick">
 				</uni-easyinput>
 			</view>
-			<button size="mini" type="primary">搜索</button>
+			<button size="mini" type="basics">搜索</button>
 		</view>
 		<scroll-view scroll-top="0" scroll-y="true" class="scroll-Y">
 			<uni-list :border="true" class="chatlistBox">

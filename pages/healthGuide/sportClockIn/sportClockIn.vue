@@ -29,8 +29,8 @@
 						运动内容：慢走30分钟
 					</view>
 					<view class="clockIn">
-						<button type="primary" @click="clockIn('manzou')" v-if="!sportContent.manzou">打卡</button>
-						<button type="primary" disabled v-else>已打卡</button>
+						<button type="basics" @click="clockIn('manzou')" v-if="!sportContent.manzou">打卡</button>
+						<button type="basics" disabled v-else>已打卡</button>
 					</view>
 				</view>
 				<view class="serverListItem">
@@ -44,8 +44,8 @@
 						运动内容：慢跑20分钟
 					</view>
 					<view class="clockIn">
-						<button type="primary" @click="clockIn('manpao')" v-if="!sportContent.manpao">打卡</button>
-						<button type="primary" disabled v-else>已打卡</button>
+						<button type="basics" @click="clockIn('manpao')" v-if="!sportContent.manpao">打卡</button>
+						<button type="basics" disabled v-else>已打卡</button>
 					</view>
 				</view>
 				<view class="serverListItem">
@@ -60,8 +60,8 @@
 						运动内容：游泳20分钟
 					</view>
 					<view class="clockIn">
-						<button type="primary" @click="clockIn('youyong')" v-if="!sportContent.youyong">打卡</button>
-						<button type="primary" disabled v-else>已打卡</button>
+						<button type="basics" @click="clockIn('youyong')" v-if="!sportContent.youyong">打卡</button>
+						<button type="basics" disabled v-else>已打卡</button>
 					</view>
 				</view>
 				<view class="serverListItem">
@@ -76,8 +76,8 @@
 						运动内容：跳绳10分钟
 					</view>
 					<view class="clockIn">
-						<button type="primary" @click="clockIn('tiaosheng')" v-if="!sportContent.tiaosheng">打卡</button>
-						<button type="primary" disabled v-else>已打卡</button>
+						<button type="basics" @click="clockIn('tiaosheng')" v-if="!sportContent.tiaosheng">打卡</button>
+						<button type="basics" disabled v-else>已打卡</button>
 					</view>
 				</view>
 			</view>
@@ -100,8 +100,8 @@
 						运动内容：哑铃10分钟
 					</view>
 					<view class="clockIn">
-						<button type="primary" @click="clockIn('yaling')" v-if="!sportContent.yaling">打卡</button>
-						<button type="primary" disabled v-else>已打卡</button>
+						<button type="basics" @click="clockIn('yaling')" v-if="!sportContent.yaling">打卡</button>
+						<button type="basics" disabled v-else>已打卡</button>
 					</view>
 				</view>
 				<view class="serverListItem">
@@ -116,8 +116,8 @@
 						运动内容：杠铃10分钟
 					</view>
 					<view class="clockIn">
-						<button type="primary" @click="clockIn('gangling')" v-if="!sportContent.gangling">打卡</button>
-						<button type="primary" disabled v-else>已打卡</button>
+						<button type="basics" @click="clockIn('gangling')" v-if="!sportContent.gangling">打卡</button>
+						<button type="basics" disabled v-else>已打卡</button>
 					</view>
 				</view>
 				<view class="serverListItem">
@@ -132,9 +132,9 @@
 						运动内容：引体向上100下
 					</view>
 					<view class="clockIn">
-						<button type="primary" @click="clockIn('yintixiangshang')"
+						<button type="basics" @click="clockIn('yintixiangshang')"
 							v-if="!sportContent.yintixiangshang">打卡</button>
-						<button type="primary" disabled v-else>已打卡</button>
+						<button type="basics" disabled v-else>已打卡</button>
 					</view>
 				</view>
 			</view>
@@ -157,8 +157,8 @@
 						运动内容：瑜伽30分钟
 					</view>
 					<view class="clockIn">
-						<button type="primary" @click="clockIn('yujia')" v-if="!sportContent.yujia">打卡</button>
-						<button type="primary" disabled v-else>已打卡</button>
+						<button type="basics" @click="clockIn('yujia')" v-if="!sportContent.yujia">打卡</button>
+						<button type="basics" disabled v-else>已打卡</button>
 					</view>
 				</view>
 				<view class="serverListItem">
@@ -173,9 +173,9 @@
 						运动内容：伸展运动20分钟
 					</view>
 					<view class="clockIn">
-						<button type="primary" @click="clockIn('shenzhanyundong')"
+						<button type="basics" @click="clockIn('shenzhanyundong')"
 							v-if="!sportContent.shenzhanyundong">打卡</button>
-						<button type="primary" disabled v-else>已打卡</button>
+						<button type="basics" disabled v-else>已打卡</button>
 					</view>
 				</view>
 			</view>

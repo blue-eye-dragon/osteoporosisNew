@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="localNumber">
-			<button type="primary" @click="pushDoctor">本机号码一键登录</button>
+			<button type="basics" @click="pushDoctor">本机号码一键登录</button>
 		</view>
 	</view>
 </template>

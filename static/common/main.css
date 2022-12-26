@@ -46,18 +46,18 @@ button {
 	margin: 0;
 }
 
-button[type=primary] {
+button[type=basics] {
 	background-color: #007aff;
 	color: #fff;
 }
 
-button[disabled][type=primary] {
+button[disabled][type=basics] {
 	opacity: 0.9;
 	background-color: #52a5ff;
 	color: #fff;
 }
 
-button-hover[type=primary] {
+button-hover[type=basics] {
 	color: rgba(0, 0%, 100%, 0.6);
 	background-color: #0062cc;
 }

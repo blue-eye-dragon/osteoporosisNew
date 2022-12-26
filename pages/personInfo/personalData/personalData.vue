@@ -92,8 +92,8 @@
 						placeholder="请输入个人介绍" :disabled="!isEdit" :inputBorder="isEdit" />
 				</uni-forms-item>
 			</uni-forms>
-			<button type="primary" @click="isEdit = true" v-show="!isEdit">编辑</button>
-			<button type="primary" @click="submitInfo('doctorForm')" v-show="isEdit">提交信息</button>
+			<button type="basics" @click="isEdit = true" v-show="!isEdit">编辑</button>
+			<button type="basics" @click="submitInfo('doctorForm')" v-show="isEdit">提交信息</button>
 		</view>
 		<view>
 			<uni-popup ref="inputDialog" mode="center">
@@ -104,7 +104,7 @@
 					<uni-data-checkbox mode="tag" multiple v-model="inputDialogTags" :localdata="hobby">
 					</uni-data-checkbox>
 					<view class="addPlanFormBtn">
-						<button type="primary" size="mini" @click="submit">提交</button>
+						<button type="basics" size="mini" @click="submit">提交</button>
 						<button size="mini" @click="resetSubmit">取消</button>
 					</view>
 				</view>
@@ -116,7 +116,7 @@
 						placeholder="请输入内容">
 					</uni-easyinput>
 					<view class="addPlanFormBtn">
-						<button type="primary" size="mini" @click="submit">提交</button>
+						<button type="basics" size="mini" @click="submit">提交</button>
 						<button size="mini" @click="resetSubmit">取消</button>
 					</view>
 				</view>

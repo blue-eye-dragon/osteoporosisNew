@@ -24,7 +24,7 @@
 					</view>
 				</uni-forms-item>
 			</uni-forms>
-			<button type="primary" @click="submit('valiForm')">提交</button>
+			<button type="basics" @click="submit('valiForm')">提交</button>
 		</uni-section>
 	</view>
 </template>

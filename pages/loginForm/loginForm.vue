@@ -22,7 +22,7 @@
 								</uni-easyinput>
 							</uni-forms-item>
 						</uni-forms>
-						<button type="primary" @click="submitLogin">提交</button>
+						<button type="basics" @click="submitLogin">提交</button>
 						<view class="forgotPassword">忘记密码？</view>
 						<view class="socialSccount">
 							<view class="socialSccountTitle">社交账号登陆</view>
@@ -51,7 +51,7 @@
 								</uni-easyinput>
 							</uni-forms-item>
 						</uni-forms>
-						<button type="primary" @click="submitRegister">提交</button>
+						<button type="basics" @click="submitRegister">提交</button>
 					</view>
 				</view>
 

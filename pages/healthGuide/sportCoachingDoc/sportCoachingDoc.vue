@@ -2,7 +2,7 @@
 	<view class="container bg">
 		<editor1 :editorDetail=infos.content @getContents="getContents" class="bg"></editor1>
 		<view class="buttonBox">
-			<button type="primary" @click="submit">提交</button>
+			<button type="basics" @click="submit">提交</button>
 		</view>
 	</view>
 </template>

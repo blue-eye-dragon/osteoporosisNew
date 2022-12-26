@@ -24,8 +24,8 @@
 				</view>
 				<uni-easyinput type="textarea" v-model="breakfast" placeholder="请输入内容" />
 				<view class="serverListButton">
-					<button type="primary" v-if="!nutritionClock.breakfast" @click="clockIn('breakfast')">打卡</button>
-					<button type="primary" disabled v-else>已打卡</button>
+					<button type="basics" v-if="!nutritionClock.breakfast" @click="clockIn('breakfast')">打卡</button>
+					<button type="basics" disabled v-else>已打卡</button>
 				</view>
 			</view>
 			<view class="serverListNutrition">
@@ -43,8 +43,8 @@
 				</view>
 				<uni-easyinput type="textarea" v-model="lunch" placeholder="请输入内容" />
 				<view class="serverListButton">
-					<button type="primary" v-if="!nutritionClock.lunch" @click="clockIn('lunch')">打卡</button>
-					<button type="primary" disabled v-else>已打卡</button>
+					<button type="basics" v-if="!nutritionClock.lunch" @click="clockIn('lunch')">打卡</button>
+					<button type="basics" disabled v-else>已打卡</button>
 				</view>
 			</view>
 			<view class="serverListNutrition">
@@ -62,8 +62,8 @@
 				</view>
 				<uni-easyinput type="textarea" v-model="dinner" placeholder="请输入内容" />
 				<view class="serverListButton">
-					<button type="primary" v-if="!nutritionClock.dinner" @click="clockIn('dinner')">打卡</button>
-					<button type="primary" disabled v-else>已打卡</button>
+					<button type="basics" v-if="!nutritionClock.dinner" @click="clockIn('dinner')">打卡</button>
+					<button type="basics" disabled v-else>已打卡</button>
 				</view>
 			</view>
 		</view>

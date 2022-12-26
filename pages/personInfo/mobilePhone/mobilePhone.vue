@@ -11,12 +11,12 @@
 					<view class="verificationCode">
 						<uni-easyinput v-model="mobileModel.verificationCode" placeholder="请输入验证码" :inputBorder="false">
 						</uni-easyinput>
-						<button type="primary"size="mini" @click="clickCode" :disabled="codeDisabled">{{codeText}}</button>
+						<button type="basics"size="mini" @click="clickCode" :disabled="codeDisabled">{{codeText}}</button>
 					</view>
 				</uni-forms-item>
 			</uni-forms>
 		</view>
-		<button type="primary" @click="mobileSubmit">提交</button>
+		<button type="basics" @click="mobileSubmit">提交</button>
 	</view>
 </template>
 

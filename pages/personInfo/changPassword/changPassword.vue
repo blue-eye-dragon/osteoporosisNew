@@ -20,7 +20,7 @@
 				</uni-forms-item>
 			</uni-forms>
 		</view>
-		<button type="primary" @click="mobileSubmit">提交</button>
+		<button type="basics" @click="mobileSubmit">提交</button>
 	</view>
 </template>
 

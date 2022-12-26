@@ -25,7 +25,7 @@
 							<uni-data-checkbox v-model="sarcopeniaForm.fallNumber" :localdata="fallNumber" />
 						</uni-forms-item>
 					</uni-forms>
-					<button type="primary">计算</button>
+					<button type="basics">计算</button>
 					<view class="score" v-if="sarcopeniaScore">
 						得分:{{sarcopeniaScore}}
 					</view>
@@ -59,7 +59,7 @@
 								icon="right" />
 						</uni-forms-item>
 					</uni-forms>
-					<button type="primary">计算</button>
+					<button type="basics">计算</button>
 					<view class="score" v-if="nutritionScore">
 						得分:{{nutritionScore}}
 					</view>
@@ -126,7 +126,7 @@
 								icon="right" />
 						</uni-forms-item>
 					</uni-forms>
-					<button type="primary">计算</button>
+					<button type="basics">计算</button>
 					<view class="score" v-if="viabilityScore">
 						得分:{{viabilityScore}}
 					</view>
@@ -195,7 +195,7 @@
 							<uni-data-checkbox v-model="riskFactorsForm.form19" :localdata="whetherNotList" />
 						</uni-forms-item>
 					</uni-forms>
-					<button type="primary">计算</button>
+					<button type="basics">计算</button>
 					<view class="score" v-if="riskFactorsScore">
 						得分:{{riskFactorsScore}}
 					</view>
@@ -218,7 +218,7 @@
 								disabled></uni-easyinput>
 						</uni-forms-item>
 					</uni-forms>
-					<button type="primary">计算</button>
+					<button type="basics">计算</button>
 					<view class="score" v-if="OSTAScore">
 						得分:{{OSTAScore}}
 					</view>
@@ -271,7 +271,7 @@
 							</uni-easyinput>
 						</uni-forms-item>
 					</uni-forms>
-					<button type="primary">计算</button>
+					<button type="basics">计算</button>
 					<view class="score" v-if="riskProfileScore">
 						得分:{{riskProfileScore}}
 					</view>

@@ -254,7 +254,7 @@
 				</uni-section>
 			</view>
 
-			<button type="primary" :disabled="flag =='look'">提交</button>
+			<button type="basics" :disabled="flag =='look'">提交</button>
 		</view>
 	</view>
 </template>

@@ -54,7 +54,7 @@
 							</view>
 						</view>
 						<view class="detailBtn">
-							<button type="primary" size="mini" @click="onClick(item.id)">详情</button>
+							<button type="basics" size="mini" @click="onClick(item.id)">详情</button>
 						</view>
 					</view>
 				</uni-card>
@@ -72,7 +72,7 @@
 							</view>
 						</view>
 						<view class="detailBtn">
-							<button type="primary" size="mini" @click="onClick(item.id)">详情</button>
+							<button type="basics" size="mini" @click="onClick(item.id)">详情</button>
 						</view>
 					</view>
 				</uni-card>
@@ -90,7 +90,7 @@
 							</view>
 						</view>
 						<view class="detailBtn">
-							<button type="primary" size="mini" @click="onClick(item.id)">详情</button>
+							<button type="basics" size="mini" @click="onClick(item.id)">详情</button>
 						</view>
 					</view>
 				</uni-card>
@@ -108,7 +108,7 @@
 							</view>
 						</view>
 						<view class="detailBtn">
-							<button type="primary" size="mini" @click="onClick(item.id)">详情</button>
+							<button type="basics" size="mini" @click="onClick(item.id)">详情</button>
 						</view>
 					</view>
 				</uni-card>

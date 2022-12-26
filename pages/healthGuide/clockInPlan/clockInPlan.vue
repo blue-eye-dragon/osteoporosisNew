@@ -21,7 +21,7 @@
 		</view>
 		<view class="remindBtn">
 			<view class="addBtn">
-				<button type="primary" @click="addPlan">新增</button>
+				<button type="basics" @click="addPlan">新增</button>
 			</view>
 			<button type="warn" @click="deletePlan">删除计划</button>
 		</view>
@@ -45,7 +45,7 @@
 							</uni-forms-item>
 						</uni-forms>
 						<view class="addPlanFormBtn">
-							<button type="primary" size="mini" @click="submit">提交</button>
+							<button type="basics" size="mini" @click="submit">提交</button>
 							<button size="mini" @click="resetSubmit">取消</button>
 						</view>
 					</uni-section>

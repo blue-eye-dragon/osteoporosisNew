@@ -5,7 +5,7 @@
 				<uni-easyinput prefixIcon="search" v-model="counselModule" placeholder="请输入要查询的信息">
 				</uni-easyinput>
 			</view>
-			<button size="mini" type="primary">搜索</button>
+			<button size="mini" type="basics">搜索</button>
 		</view>
 		<!-- 	<swiper class="swiper" :indicator-dots="false">
 			<swiper-item v-for="(swiperItem,index) in info" :key="index" :index="index">
@@ -225,6 +225,9 @@
 <style lang="less" scoped>
 	/deep/.uni-section .uni-section-header {
 		padding: 5px;
+	}
+	/deep/.uni-list-chat__container {
+		padding: 10px 0;
 	}
 	.secendMain {
 		padding: 0 20rpx 50rpx;

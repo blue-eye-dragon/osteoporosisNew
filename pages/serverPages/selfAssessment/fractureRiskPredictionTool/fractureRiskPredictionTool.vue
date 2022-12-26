@@ -73,9 +73,9 @@
 					@click="changeSelectNum('del')">上一页</button>
 				<button class="changeSelectNum" v-if="selectNum != allItemNum && !isSubmit" size="mini"
 					@click="changeSelectNum('add')">下一页</button>
-				<button v-if="selectNum == allItemNum && !isSubmit" @click="complete()" type="primary"
+				<button v-if="selectNum == allItemNum && !isSubmit" @click="complete()" type="basics"
 					size="mini">完成</button>
-				<button class="submit" v-if="isSubmit && flag != 'look'" @click="submit()" type="primary"
+				<button class="submit" v-if="isSubmit && flag != 'look'" @click="submit()" type="basics"
 					size="mini">提交</button>
 			</view>
 		</uni-section>

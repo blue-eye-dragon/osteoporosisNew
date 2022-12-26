@@ -1,12 +1,11 @@
 <template>
 	<view class="onlineConsulting">
-		<view class="chatSearch">
-			<view class="chatSearchContent">
-				
-					<uni-easyinput suffixIcon="search" v-model="chatSearch" placeholder="请输入要搜索的内容" @iconClick="iconClick">
-					</uni-easyinput>
+		<view class="searchInput">
+			<view class="searchInputContent">
+				<uni-easyinput suffixIcon="search" v-model="chatSearch" placeholder="请输入要搜索的内容" @iconClick="iconClick">
+				</uni-easyinput>
 			</view>
-			<button size="mini" type="primary">搜索</button>
+			<button size="mini" type="basics">搜索</button>
 		</view>
 		<scroll-view scroll-top="0" scroll-y="true" class="scroll-Y">
 			<uni-list :border="true" class="chatlistBox">
@@ -118,7 +117,7 @@
 		},
 		methods: {
 			iconClick() {},
-			chatListClick () {
+			chatListClick() {
 				this.navigateTo('/pages/HM-chat/HM-chat')
 			}
 		}
@@ -126,18 +125,29 @@
 </script>
 
 <style lang="less" scoped>
-	.chatSearch {
-		padding: 10px;
-		display: flex;
-		.chatSearchContent {
-			flex: 1;
+	/deep/.uni-list-chat__container {
+		padding: 10px 0;
+	}
+	.onlineConsulting {
+		padding: 0 20rpx 50rpx;
+
+		.searchInput {
+			padding: 20rpx 0;
+			display: flex;
+			align-items: center;
+
+			.searchInputContent {
+				flex: 1;
+				margin-right: 20rpx;
+			}
 		}
 	}
 
 	.scroll-Y {
 		height: calc(100vh - 130px);
+		overflow-y: auto;
 		/* #ifdef MP */
-		height: calc(100vh - 180px);
+		height: calc(100vh - 57px - env(safe-area-inset-bottom));
 
 		/* #endif */
 	}

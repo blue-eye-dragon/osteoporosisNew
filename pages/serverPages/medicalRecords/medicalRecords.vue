@@ -5,7 +5,7 @@
 				<uni-easyinput prefixIcon="search" v-model="patientName" placeholder="患者姓名" @iconClick="iconClick">
 				</uni-easyinput>
 			</view>
-			<button size="mini" type="primary">搜索</button>
+			<button size="mini" type="basics">搜索</button>
 		</view>
 		<uni-table border stripe emptyText="暂无更多数据">
 			<!-- 表头行 -->
@@ -21,7 +21,7 @@
 				<uni-td align="center">{{ item.lastTime }}</uni-td>
 				<uni-td align="center">
 					<view class="uni-group">
-						<button class="uni-button" size="mini" type="primary" @click="assessDetail(item.id)">详情</button>
+						<button class="uni-button" size="mini" type="basics" @click="assessDetail(item.id)">详情</button>
 						<!-- <button class="uni-button" size="mini" type="warn">删除</button> -->
 					</view>
 				</uni-td>
